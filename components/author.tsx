@@ -1,12 +1,7 @@
 import { Aurora } from "@/components/aurora"
 import { asset } from '@/lib/utils'
 import { Reveal } from "@/components/reveal"
-
-const FACTS = [
-  { value: "8+", label: "лет в дизайне и вёрстке" },
-  { value: "40+", label: "упакованных продуктов" },
-  { value: "×2.8", label: "средний рост конверсии" },
-]
+import { Clapperboard, Package, PenTool } from "lucide-react"
 
 export function Author() {
   return (
@@ -58,16 +53,16 @@ export function Author() {
             </p>
           </Reveal>
 
-          <div className="mt-10 grid grid-cols-3 gap-6 border-t border-border pt-8">
-            {FACTS.map((f, i) => (
-              <Reveal key={f.label} delay={320 + i * 90}>
-                <div>
-                  <div className="font-serif text-3xl text-primary md:text-4xl">{f.value}</div>
-                  <div className="mt-1 text-xs leading-snug text-muted-foreground">{f.label}</div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+          {/* decorative trio: cinema · packaging · craft (no claims, just a design element) */}
+          <Reveal delay={320}>
+            <div className="mt-10 flex items-center gap-5 border-t border-border pt-8 text-primary/55">
+              <Clapperboard className="size-6" aria-hidden="true" />
+              <span className="size-1 rounded-full bg-primary/30" aria-hidden="true" />
+              <Package className="size-6" aria-hidden="true" />
+              <span className="size-1 rounded-full bg-primary/30" aria-hidden="true" />
+              <PenTool className="size-6" aria-hidden="true" />
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>
