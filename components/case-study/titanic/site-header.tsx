@@ -16,7 +16,7 @@ export function SiteHeader() {
           Кейс редизайна
         </span>
         <Link
-          href="#contact"
+          href="/#contact"
           className="rounded-sm border border-foreground px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-foreground transition-colors hover:bg-foreground hover:text-background"
         >
           Обсудить проект

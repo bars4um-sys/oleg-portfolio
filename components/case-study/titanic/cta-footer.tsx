@@ -1,4 +1,4 @@
-import { ArrowUpRight } from 'lucide-react'
+import Link from 'next/link'
 import { Reveal } from '@/components/case-study/titanic/reveal'
 
 export function CtaFooter() {
@@ -10,16 +10,12 @@ export function CtaFooter() {
             <h2 className="max-w-lg font-serif text-4xl leading-[1.1] tracking-tight text-balance sm:text-5xl">
               Ваш лендинг заслуживает того же внимания к деталям
             </h2>
-            <a
-              href="mailto:hello@studio.design"
-              className="group inline-flex shrink-0 items-center gap-2 rounded-sm bg-foreground px-6 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-background transition-colors hover:bg-accent hover:text-accent-foreground"
+            <Link
+              href="/#contact"
+              className="inline-flex shrink-0 items-center rounded-sm bg-foreground px-6 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-background transition-colors hover:bg-accent hover:text-accent-foreground"
             >
-              Обсудить редизайн
-              <ArrowUpRight
-                className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                aria-hidden="true"
-              />
-            </a>
+              Обсудить проект
+            </Link>
           </div>
         </Reveal>
 

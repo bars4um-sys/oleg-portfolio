@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { buttonVariants } from '@/components/ui/button'
 import { Reveal } from '@/components/case-study/scenario/reveal'
@@ -19,19 +20,31 @@ export function CtaFooter() {
             </p>
           </div>
 
-          <a
-            href="https://course.kinomagica.ru"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={buttonVariants({
-              size: 'lg',
-              className: 'rounded-sm px-6 text-sm',
-            })}
-          >
-            Смотреть готовый сайт
-            <ArrowUpRight data-icon="inline-end" aria-hidden="true" />
-            <span className="sr-only">(открывается в новой вкладке)</span>
-          </a>
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <a
+              href="https://course.kinomagica.ru"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={buttonVariants({
+                size: 'lg',
+                className: 'rounded-sm px-6 text-sm',
+              })}
+            >
+              Смотреть готовый сайт
+              <ArrowUpRight data-icon="inline-end" aria-hidden="true" />
+              <span className="sr-only">(открывается в новой вкладке)</span>
+            </a>
+            <Link
+              href="/#contact"
+              className={buttonVariants({
+                variant: 'outline',
+                size: 'lg',
+                className: 'rounded-sm px-6 text-sm',
+              })}
+            >
+              Обсудить проект
+            </Link>
+          </div>
         </Reveal>
       </div>
 

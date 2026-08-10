@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
 import { buttonVariants } from '@/components/ui/button'
 
 const links = [
@@ -33,16 +32,12 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <a
-          href="https://course.kinomagica.ru"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/#contact"
           className={buttonVariants({ size: 'sm', className: 'rounded-sm' })}
         >
-          Смотреть сайт
-          <ArrowUpRight data-icon="inline-end" aria-hidden="true" />
-          <span className="sr-only">(открывается в новой вкладке)</span>
-        </a>
+          Обсудить проект
+        </Link>
       </div>
     </header>
   )
