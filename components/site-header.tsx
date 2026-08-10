@@ -5,6 +5,7 @@ const NAV = [
   { label: "Об авторе", href: "#author" },
   { label: "Услуги", href: "#services" },
   { label: "Процесс", href: "#process" },
+  { label: "Контакты", href: "#contact" },
 ]
 
 export function SiteHeader() {
@@ -29,7 +30,7 @@ export function SiteHeader() {
         </nav>
 
         <Button
-          render={<a href="https://t.me/OlegUmaPalata" target="_blank" rel="noopener noreferrer" />}
+          render={<a href="#contact" />}
           nativeButton={false}
           className="rounded-full bg-primary px-5 text-primary-foreground hover:bg-primary/90"
         >

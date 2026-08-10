@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Send, Mail } from "lucide-react"
+import { Send, MessageCircle, MessageSquare } from "lucide-react"
 import { Aurora } from "@/components/aurora"
 import { Reveal } from "@/components/reveal"
 
@@ -37,13 +37,22 @@ export function SiteFooter() {
             <Send className="size-4" /> Написать Олегу в Telegram
           </Button>
           <Button
-            render={<a href="mailto:hello@example.com" />}
+            render={<a href="https://vk.com/" target="_blank" rel="noopener noreferrer" />}
             nativeButton={false}
             size="lg"
             variant="outline"
             className="rounded-full border-border bg-transparent px-7 text-foreground transition-transform hover:-translate-y-0.5 hover:bg-card hover:text-primary"
           >
-            <Mail className="size-4" /> Посмотреть контакты
+            <MessageCircle className="size-4" /> Написать в ВК
+          </Button>
+          <Button
+            render={<a href="https://max.ru/" target="_blank" rel="noopener noreferrer" />}
+            nativeButton={false}
+            size="lg"
+            variant="outline"
+            className="rounded-full border-border bg-transparent px-7 text-foreground transition-transform hover:-translate-y-0.5 hover:bg-card hover:text-primary"
+          >
+            <MessageSquare className="size-4" /> Написать в MAX
           </Button>
         </div>
 

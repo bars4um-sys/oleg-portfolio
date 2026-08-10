@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { asset } from '@/lib/utils'
 import { Aurora } from "@/components/aurora"
 import { Reveal } from "@/components/reveal"
-import { ArrowDown, ArrowUpRight } from "lucide-react"
+import { ArrowDown } from "lucide-react"
 
 export function Hero() {
   return (
@@ -64,15 +64,6 @@ export function Hero() {
               className="rounded-full bg-primary px-7 text-primary-foreground transition-transform hover:-translate-y-0.5 hover:bg-primary/90"
             >
               Смотреть кейсы <ArrowDown className="size-4" />
-            </Button>
-            <Button
-              render={<a href="https://t.me/OlegUmaPalata" target="_blank" rel="noopener noreferrer" />}
-              nativeButton={false}
-              size="lg"
-              variant="outline"
-              className="rounded-full border-border bg-transparent px-7 text-foreground transition-transform hover:-translate-y-0.5 hover:bg-card hover:text-primary"
-            >
-              Написать в Telegram <ArrowUpRight className="size-4" />
             </Button>
           </div>
         </Reveal>
