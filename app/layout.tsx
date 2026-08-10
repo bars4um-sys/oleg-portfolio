@@ -42,17 +42,19 @@ const plexMono = IBM_Plex_Mono({
   display: 'swap',
 })
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 export const metadata: Metadata = {
   title: 'Олег Чумаченко — Веб-дизайнер & Продуктовый верстальщик',
   description:
     'Превращаю сухие программы и тексты в кинематографичные лендинги, которые читают до конца и покупают. Упаковка экспертных продуктов и редизайн лендингов для онлайн-школ.',
   icons: {
     icon: [
-      { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },
-      { url: '/icon-dark-32x32.png', media: '(prefers-color-scheme: dark)' },
-      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: `${basePath}/icon-light-32x32.png`, media: '(prefers-color-scheme: light)' },
+      { url: `${basePath}/icon-dark-32x32.png`, media: '(prefers-color-scheme: dark)' },
+      { url: `${basePath}/icon.svg`, type: 'image/svg+xml' },
     ],
-    apple: '/apple-icon.png',
+    apple: `${basePath}/apple-icon.png`,
   },
 }
 
