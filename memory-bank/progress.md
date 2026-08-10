@@ -10,7 +10,7 @@
 ## Известные особенности
 - `Доп/` (вспомогательные материалы/отчёты) закоммичен — можно вынести в .gitignore при желании.
 - Кейс 03 «Премиум-курс» — заглушка (locked), ведёт на `#contact`.
-- Telegram-кнопка работает (`@OlegUmaPalata`). Кнопки ВК (`vk.com/`) и MAX (`max.ru/`) — заглушки, ждут ники/ссылки владельца.
+- Контакты: Telegram (`@OlegUmaPalata`), ВК (`vk.me/oleg4um`), MAX (`max.ru/u/f9LH...`) — все ссылки реальные и рабочие.
 
 ## Эволюция решений
 - Сначала пытался `onlyBuiltDependencies` в pnpm-workspace.yaml — не сработало (старое имя ключа в pnpm 11; нужно `allowBuilds`/`dangerouslyAllowAllBuilds`).
