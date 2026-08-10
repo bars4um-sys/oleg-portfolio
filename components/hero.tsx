@@ -66,7 +66,7 @@ export function Hero() {
               Смотреть кейсы <ArrowDown className="size-4" />
             </Button>
             <Button
-              render={<a href="#contact" />}
+              render={<a href="https://t.me/OlegUmaPalata" target="_blank" rel="noopener noreferrer" />}
               nativeButton={false}
               size="lg"
               variant="outline"

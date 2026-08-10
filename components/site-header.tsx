@@ -29,7 +29,7 @@ export function SiteHeader() {
         </nav>
 
         <Button
-          render={<a href="#contact" />}
+          render={<a href="https://t.me/OlegUmaPalata" target="_blank" rel="noopener noreferrer" />}
           nativeButton={false}
           className="rounded-full bg-primary px-5 text-primary-foreground hover:bg-primary/90"
         >

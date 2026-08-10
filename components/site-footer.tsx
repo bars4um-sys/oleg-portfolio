@@ -29,7 +29,7 @@ export function SiteFooter() {
 
         <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
           <Button
-            render={<a href="https://t.me/" target="_blank" rel="noopener noreferrer" />}
+            render={<a href="https://t.me/OlegUmaPalata" target="_blank" rel="noopener noreferrer" />}
             nativeButton={false}
             size="lg"
             className="rounded-full bg-primary px-7 text-primary-foreground transition-transform hover:-translate-y-0.5 hover:bg-primary/90"
