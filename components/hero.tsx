@@ -7,8 +7,8 @@ import { ArrowDown } from "lucide-react"
 export function Hero() {
   return (
     <section id="top" className="grain relative overflow-hidden">
-      {/* animated gold aurora blobs + neuro-mesh texture */}
-      <Aurora seed={11} neuroOpacity={0.6} />
+      {/* animated gold aurora blobs + neuro-mesh texture (mesh is clipped to the left ~2/3 so it stays off the right-side portrait) */}
+      <Aurora seed={11} neuroOpacity={0.6} neuroRegion="top-0 bottom-0 left-0 right-1/3" />
       {/* faded cinematic portrait backdrop on the right */}
       <img
         src={asset("/monk-backdrop.png")}
