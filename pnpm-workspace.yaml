@@ -1,0 +1,5 @@
+# pnpm 11 reads its settings from here (the `pnpm` field in package.json is
+# no longer read). These keep the build working locally and in CI despite the
+# transitive `msw` package shipping a build script.
+dangerouslyAllowAllBuilds: true   # allow msw's build script so it isn't "ignored"
+verifyDepsBeforeRun: false         # don't run `pnpm install` before every script
