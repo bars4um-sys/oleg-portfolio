@@ -25,7 +25,7 @@ export function BriefSection() {
     <section id="brief" className="border-b border-paper-line">
       <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
         <Reveal>
-          <SectionLabel scene="СЦ. 02" label="Вводные данные" />
+          <SectionLabel scene="СЦ. 01" label="Вводные данные" />
           <h2 className="mt-4 max-w-xl text-balance font-serif text-3xl leading-tight text-ink md:text-4xl">
             На входе — только программа курса
           </h2>

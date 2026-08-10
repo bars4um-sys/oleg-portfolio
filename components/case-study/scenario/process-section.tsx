@@ -27,7 +27,7 @@ export function ProcessSection() {
     <section id="process" className="border-b border-paper-line bg-card/40">
       <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
         <Reveal>
-          <SectionLabel scene="СЦ. 03" label="Процесс" />
+          <SectionLabel scene="СЦ. 02" label="Процесс" />
           <h2 className="mt-4 max-w-xl text-balance font-serif text-3xl leading-tight text-ink md:text-4xl">
             Три акта: от текста программы до рабочего сайта
           </h2>

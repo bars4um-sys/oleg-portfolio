@@ -7,7 +7,10 @@ export function AuthorSection() {
   return (
     <section className="border-b border-paper-line bg-card/40">
       <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
-        <div className="grid gap-12 md:grid-cols-[1fr_1fr] md:items-center">
+        <Reveal>
+          <SectionLabel scene="СЦ. 04" label="Об авторе" />
+        </Reveal>
+        <div className="mt-8 grid gap-12 md:grid-cols-[1fr_1fr] md:items-center md:mt-12">
           <Reveal className="order-2 md:order-1">
             <ScriptFrame
               src="/images/adapted-script-author.png"
@@ -19,8 +22,7 @@ export function AuthorSection() {
 
           <div className="order-1 md:order-2">
             <Reveal>
-              <SectionLabel scene="СЦ. 05" label="Об авторе" />
-              <h2 className="mt-4 text-balance font-serif text-3xl leading-tight text-ink md:text-4xl">
+              <h2 className="text-balance font-serif text-3xl leading-tight text-ink md:text-4xl">
                 Строчка «автор курса» стала полноценным блоком доверия
               </h2>
               <p className="mt-4 text-pretty leading-relaxed text-ink-soft">

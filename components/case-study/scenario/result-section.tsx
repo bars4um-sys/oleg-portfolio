@@ -11,7 +11,7 @@ export function ResultSection() {
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <SectionLabel scene="СЦ. 06" label="Результат" />
+              <SectionLabel scene="СЦ. 05" label="Результат" />
               <h2 className="mt-4 max-w-xl text-balance font-serif text-3xl leading-tight text-ink md:text-4xl">
                 Готовый сайт на собственном домене
               </h2>

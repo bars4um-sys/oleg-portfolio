@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { ArrowLeft } from 'lucide-react'
 import { buttonVariants } from '@/components/ui/button'
 
 const links = [
@@ -13,11 +14,11 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-paper-line bg-background/90 backdrop-blur-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
         <Link
-          href="/"
-          className="flex items-baseline gap-2 font-mono text-xs uppercase tracking-[0.18em] text-ink-soft"
+          href="/#cases"
+          className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.18em] text-ink-soft transition-colors hover:text-redline"
         >
-          <span className="text-redline">СЦ. 01</span>
-          <span className="hidden sm:inline">Кейс-стади · Портфолио</span>
+          <ArrowLeft className="size-3.5" aria-hidden="true" />
+          <span className="hidden sm:inline">Все проекты</span>
         </Link>
 
         <nav className="hidden items-center gap-6 font-mono text-xs uppercase tracking-[0.1em] text-ink-soft md:flex">

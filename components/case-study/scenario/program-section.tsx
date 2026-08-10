@@ -42,7 +42,7 @@ export function ProgramSection() {
         <div className="grid gap-12 md:grid-cols-[1fr_1fr] md:items-start">
           <div>
             <Reveal>
-              <SectionLabel scene="СЦ. 04" label="Программа на сайте" />
+              <SectionLabel scene="СЦ. 03" label="Программа на сайте" />
               <h2 className="mt-4 text-balance font-serif text-3xl leading-tight text-ink md:text-4xl">
                 15 занятий превратились в 5 смысловых блоков
               </h2>

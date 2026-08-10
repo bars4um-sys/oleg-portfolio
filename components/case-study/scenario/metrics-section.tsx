@@ -13,7 +13,7 @@ export function MetricsSection() {
     <section className="border-b border-paper-line bg-card/40">
       <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
         <Reveal>
-          <SectionLabel scene="СЦ. 07" label="Итог по цифрам" />
+          <SectionLabel scene="СЦ. 06" label="Итог по цифрам" />
         </Reveal>
 
         <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
