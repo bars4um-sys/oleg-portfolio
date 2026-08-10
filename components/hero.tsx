@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import { asset } from '@/lib/utils'
 import { Aurora } from "@/components/aurora"
 import { Reveal } from "@/components/reveal"
 import { ArrowDown, ArrowUpRight } from "lucide-react"
@@ -10,7 +11,7 @@ export function Hero() {
       <Aurora seed={11} neuroOpacity={0.6} />
       {/* faded cinematic portrait backdrop on the right */}
       <img
-        src="/monk-backdrop.png"
+        src={asset("/monk-backdrop.png")}
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute right-0 top-0 hidden h-full w-1/2 select-none object-cover object-center opacity-[0.14] mix-blend-luminosity md:block lg:w-[45%]"

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { cn } from '@/lib/utils'
+import { cn, asset } from '@/lib/utils'
 
 export function BrowserFrame({
   src,
@@ -58,7 +58,7 @@ export function BrowserFrame({
       </div>
       <div className="relative overflow-y-auto" style={{ height }}>
         <Image
-          src={src || '/placeholder.svg'}
+          src={asset(src || '/placeholder.svg')}
           alt={alt}
           width={1000}
           height={4000}

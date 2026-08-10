@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { cn } from '@/lib/utils'
+import { cn, asset } from '@/lib/utils'
 
 export function ScriptFrame({
   src,
@@ -31,7 +31,7 @@ export function ScriptFrame({
           style={{ aspectRatio: aspect }}
         >
           <Image
-            src={src || '/placeholder.svg'}
+            src={asset(src || '/placeholder.svg')}
             alt={alt}
             fill
             priority={priority}

@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { asset } from '@/lib/utils'
 import { ArrowUpRight, Lock } from "lucide-react"
 import { Reveal } from "@/components/reveal"
 import { NeuroTexture } from "@/components/neuro-texture"
@@ -69,7 +70,7 @@ export function Cases() {
           >
             <div className="relative aspect-[4/3] overflow-hidden">
               <img
-                src={item.image || "/placeholder.svg"}
+                src={asset(item.image || "/placeholder.svg")}
                 alt={`Мокап проекта: ${item.title}`}
                 className={`size-full object-cover object-top transition-transform duration-[1200ms] ease-out group-hover:object-bottom ${
                   item.locked ? "blur-sm brightness-50 object-center" : ""

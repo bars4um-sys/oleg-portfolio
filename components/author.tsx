@@ -1,4 +1,5 @@
 import { Aurora } from "@/components/aurora"
+import { asset } from '@/lib/utils'
 import { Reveal } from "@/components/reveal"
 
 const FACTS = [
@@ -27,7 +28,7 @@ export function Author() {
           />
           <div className="animate-float overflow-hidden rounded-[2rem] border border-primary/25 bg-card shadow-2xl">
             <img
-              src="/oleg-portrait.webp"
+              src={asset("/oleg-portrait.webp")}
               alt="Портрет Олега Чумаченко — веб-дизайнера и продуктового верстальщика"
               className="h-auto w-full object-cover"
             />

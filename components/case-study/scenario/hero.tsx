@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { asset } from '@/lib/utils'
 import { ArrowUpRight, FileText } from 'lucide-react'
 import { buttonVariants } from '@/components/ui/button'
 import { Stamp } from '@/components/case-study/scenario/stamp'
@@ -93,7 +94,7 @@ export function Hero() {
                 </div>
                 <div className="relative aspect-[16/10] w-full">
                   <Image
-                    src="/images/adapted-script-hero.png"
+                    src={asset("/images/adapted-script-hero.png")}
                     alt="Готовый первый экран сайта course.kinomagica.ru"
                     fill
                     priority

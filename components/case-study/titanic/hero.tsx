@@ -1,4 +1,5 @@
 import { ArrowDown } from 'lucide-react'
+import { asset } from '@/lib/utils'
 import Image from 'next/image'
 
 const META = [
@@ -81,7 +82,7 @@ export function Hero() {
                 </div>
                 <div className="relative h-full w-full">
                   <Image
-                    src="/images/titanic-english-before.jpg"
+                    src={asset("/images/titanic-english-before.jpg")}
                     alt="Старая версия лендинга «Titanic English»"
                     fill
                     className="object-cover object-top"
@@ -103,7 +104,7 @@ export function Hero() {
                 </div>
                 <div className="relative h-full w-full">
                   <Image
-                    src="/images/titanic-english-after.jpg"
+                    src={asset("/images/titanic-english-after.jpg")}
                     alt="Новая версия лендинга «Titanic English»"
                     fill
                     className="object-cover object-top"
