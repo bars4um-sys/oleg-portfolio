@@ -22,7 +22,7 @@ const CASES: CaseItem[] = [
     title: "Из программы курса — в продающий лендинг",
     description:
       "Пересборка хаотичного текста программы в структурированный 5-блочный лендинг с конверсией в заявку. Понятная иерархия, кастомный UI и полная готовность к запуску.",
-    image: "/cases/scenario-case.jpg",
+    image: "/cases/scenario-case.webp",
     cta: "Читать полный кейс",
     href: "/scenario",
   },
@@ -32,7 +32,7 @@ const CASES: CaseItem[] = [
     title: "Из сухого конспекта — в кинопремьеру",
     description:
       "Редизайн сайта для авторского курса по фильму «Титаник». Замена академической подачи на кинематографичный UX/UI, передающий атмосферу блокбастера.",
-    image: "/cases/titanic-case.jpg",
+    image: "/cases/titanic-case.webp",
     cta: "Читать полный кейс",
     href: "/titanic",
   },
@@ -42,7 +42,7 @@ const CASES: CaseItem[] = [
     title: "Комплексная упаковка флагманского онлайн-курса",
     description:
       "Проект в разработке. Создание сквозного визуального стиля: от промо-лендинга до презентаций и материалов внутри личного кабинета.",
-    image: "/cases/premium-course.png",
+    image: "/cases/premium-course.webp",
     cta: "Скоро анонс",
     locked: true,
   },

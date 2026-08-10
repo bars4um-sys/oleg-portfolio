@@ -13,7 +13,7 @@ export function AuthorSection() {
         <div className="mt-8 grid gap-12 md:grid-cols-[1fr_1fr] md:items-center md:mt-12">
           <Reveal className="order-2 md:order-1">
             <ScriptFrame
-              src="/images/adapted-script-author.png"
+              src="/images/adapted-script-author.webp"
               alt="Блок «Об авторе» на сайте course.kinomagica.ru"
               caption="Один абзац из шапки документа развернулся в отдельный экран сайта."
               sceneNumber="ЭКРАН · АВТОР"

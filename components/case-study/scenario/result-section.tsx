@@ -35,7 +35,7 @@ export function ResultSection() {
         <div className="mt-10 grid gap-8 md:grid-cols-2">
           <Reveal>
             <ScriptFrame
-              src="/images/adapted-script-results.png"
+              src="/images/adapted-script-results.webp"
               alt="Дополнительный смысловой блок сайта course.kinomagica.ru"
               caption="Развёрнутый блок с методикой курса — язык, понятный будущему слушателю, а не методисту."
               sceneNumber="ЭКРАН · О КУРСЕ"
@@ -43,7 +43,7 @@ export function ResultSection() {
           </Reveal>
           <Reveal delay={100}>
             <ScriptFrame
-              src="/images/adapted-script-pricing.png"
+              src="/images/adapted-script-pricing.webp"
               alt="Блок стоимости и записи на курс на сайте course.kinomagica.ru"
               caption="Стоимость и запись — короткий путь от программы курса к решению записаться."
               sceneNumber="ЭКРАН · СТОИМОСТЬ"
@@ -54,7 +54,7 @@ export function ResultSection() {
         <Reveal delay={150} className="mt-10">
           <div className="grid gap-8 border border-paper-line bg-card p-6 md:grid-cols-[220px_1fr] md:items-center md:p-8">
             <ScriptFrame
-              src="/images/adapted-script-mobile.png"
+              src="/images/adapted-script-mobile.webp"
               alt="Мобильная версия сайта course.kinomagica.ru"
               sceneNumber="МОБИЛЬНАЯ"
               aspect="390/844"

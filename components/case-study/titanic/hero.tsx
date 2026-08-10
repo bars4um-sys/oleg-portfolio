@@ -82,7 +82,7 @@ export function Hero() {
                 </div>
                 <div className="relative h-full w-full">
                   <Image
-                    src={asset("/images/titanic-english-before.jpg")}
+                    src={asset("/images/titanic-english-before.webp")}
                     alt="Старая версия лендинга «Titanic English»"
                     fill
                     className="object-cover object-top"
@@ -104,7 +104,7 @@ export function Hero() {
                 </div>
                 <div className="relative h-full w-full">
                   <Image
-                    src={asset("/images/titanic-english-after.jpg")}
+                    src={asset("/images/titanic-english-after.webp")}
                     alt="Новая версия лендинга «Titanic English»"
                     fill
                     className="object-cover object-top"

@@ -34,7 +34,7 @@ export function AfterSection() {
         <div className="mt-14 grid gap-12 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-16">
           <Reveal delay={80}>
             <BrowserFrame
-              src="/images/titanic-english-after.jpg"
+              src="/images/titanic-english-after.webp"
               alt="Новая версия лендинга Titanic English — тёмно-синий кинематографичный дизайн с золотыми акцентами"
               tone="dark"
               chromeLabel="englishteacup.org/titanic — новая версия"

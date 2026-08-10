@@ -77,7 +77,7 @@ export function ProgramSection() {
 
           <Reveal delay={120} className="md:mt-16">
             <ScriptFrame
-              src="/images/adapted-script-program.png"
+              src="/images/adapted-script-program.webp"
               alt="Блок «Программа курса» на сайте course.kinomagica.ru"
               caption="Блок программы на готовом сайте — тематические занятия вместо сплошного списка."
               sceneNumber="ЭКРАН · ПРОГРАММА"

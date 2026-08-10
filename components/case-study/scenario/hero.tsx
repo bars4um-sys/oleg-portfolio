@@ -94,7 +94,7 @@ export function Hero() {
                 </div>
                 <div className="relative aspect-[16/10] w-full">
                   <Image
-                    src={asset("/images/adapted-script-hero.png")}
+                    src={asset("/images/adapted-script-hero.webp")}
                     alt="Готовый первый экран сайта course.kinomagica.ru"
                     fill
                     priority

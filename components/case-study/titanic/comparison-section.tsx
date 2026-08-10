@@ -29,7 +29,7 @@ export function ComparisonSection() {
                 До
               </span>
               <BrowserFrame
-                src="/images/titanic-english-before.jpg"
+                src="/images/titanic-english-before.webp"
                 alt="Первый экран старой версии лендинга"
                 chromeLabel="Старая версия"
                 height={420}
@@ -42,7 +42,7 @@ export function ComparisonSection() {
                 После
               </span>
               <BrowserFrame
-                src="/images/titanic-english-after.jpg"
+                src="/images/titanic-english-after.webp"
                 alt="Первый экран новой версии лендинга"
                 tone="dark"
                 chromeLabel="Новая версия"
