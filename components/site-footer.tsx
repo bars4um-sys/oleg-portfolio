@@ -37,7 +37,7 @@ export function SiteFooter() {
             <Send className="size-4" /> Написать Олегу в Telegram
           </Button>
           <Button
-            render={<a href="https://vk.com/" target="_blank" rel="noopener noreferrer" />}
+            render={<a href="https://vk.me/oleg4um" target="_blank" rel="noopener noreferrer" />}
             nativeButton={false}
             size="lg"
             variant="outline"
@@ -46,7 +46,7 @@ export function SiteFooter() {
             <MessageCircle className="size-4" /> Написать в ВК
           </Button>
           <Button
-            render={<a href="https://max.ru/" target="_blank" rel="noopener noreferrer" />}
+            render={<a href="https://max.ru/u/f9LHodD0cOJIVcmBcqpCqla3FkspE4qR0xQgXdyoZWvPR2ivG861igeGeMs" target="_blank" rel="noopener noreferrer" />}
             nativeButton={false}
             size="lg"
             variant="outline"
