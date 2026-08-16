@@ -15,6 +15,7 @@
 ## Деплой
 - GitHub Actions (`.github/workflows/deploy.yml`): push в `main` → install → build (с авто basePath) → upload-pages-artifact → deploy-pages.
 - URL: `https://bars4um-sys.github.io/oleg-portfolio/`
+- `configure-pages@v6` + `enablement: true`; токен — `secrets.PAGES_PAT || github.token` (PAT нужен только для авто-включения Pages, обычный деплой работает на GITHUB_TOKEN).
 
 ## Важные нюансы
 - pnpm 11 больше не читает поле `pnpm` в package.json — настройки в `pnpm-workspace.yaml`.

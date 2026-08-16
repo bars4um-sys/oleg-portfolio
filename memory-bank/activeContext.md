@@ -40,3 +40,17 @@
 - **Сайт живой:** https://bars4um-sys.github.io/oleg-portfolio/ (репо: `bars4um-sys/oleg-portfolio`).
 - Все 3 страницы рендерятся; картинки и favicon загружаются (HTTP 200); nav и CTA обновлены.
 - Контакты (Telegram/ВК/MAX) — все ссылки реальные и рабочие.
+
+## Инцидент 16.08.2026: «сайт не работает с гитхаба»
+- Симптом у пользователя: деплой-воркфлоу падал на шаге `actions/configure-pages` с
+  `Get Pages site failed. Please verify that the repository has Pages enabled...`.
+- Причина: объект GitHub Pages у репо был в неактивном состоянии (`GET /pages` → 404,
+  у PAT-запроса `status: null`), хотя старый артефакт ещё отдавался (сайт «вроде живой»,
+  но деплой сломан). Лечится самим деплоем: ручной `workflow_dispatch` реактивировал Pages.
+- **Исправление (коммит `1781ef5`, pushed):** в `.github/workflows/deploy.yml`
+  - `actions/configure-pages@v5` → `@v6` (Node 24, убирает deprecation-warning);
+  - добавлены `token: ${{ secrets.PAGES_PAT || github.token }}` и `enablement: true` —
+    авто-включение Pages, если запись сайта пропала/неактивна (это и советует сам error-месседж).
+  - Опционально: чтобы enablement работал на 100%, можно добавить PAT (scope `repo` или
+    fine-grained `Pages: write`) в repo secrets под именем `PAGES_PAT`.
+- Примечание: warning про «Node.js 20 is deprecated» для checkout/setup-node/pnpm — некритичен.
