@@ -36,22 +36,22 @@ export function Hero() {
       <div className="relative mx-auto max-w-6xl px-6 pb-24 pt-20 md:pt-28">
         <Reveal>
           <p className="max-w-2xl text-xs font-medium tracking-[0.28em] text-primary">
-            УПАКОВКА ЭКСПЕРТНЫХ ПРОДУКТОВ &amp; РЕДИЗАЙН ЛЕНДИНГОВ
+            УПАКОВКА ЭКСПЕРТНЫХ ПРОДУКТОВ И РЕДИЗАЙН САЙТОВ
           </p>
         </Reveal>
 
         <Reveal delay={120}>
           <h1 className="mt-8 max-w-4xl text-balance font-serif text-5xl font-medium leading-[1.05] tracking-tight text-foreground md:text-7xl">
-            Превращаю сухие программы и тексты в лендинги, которые{" "}
-            <span className="shimmer-text">читают до конца</span> и покупают.
+            Превращаю сложные материалы и программы в сайты, которые{" "}
+            <span className="shimmer-text">дочитывают до конца</span> и покупают.
           </h1>
         </Reveal>
 
         <Reveal delay={240}>
           <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            Разрабатываю веб-страницы, презентации и визуальные экосистемы для экспертов и онлайн-школ.
-            Избавляю ваши продукты от вида «курсовой работы», придавая им кинематографичный размах и
-            понятную UX-структуру.
+            Разрабатываю посадочные страницы, презентации и материалы курсов для экспертов и бизнеса. Перевожу
+            объёмные тексты в наглядную систему: с акцентом на цифрах, ясной логике и лёгком восприятии с
+            первых секунд.
           </p>
         </Reveal>
 

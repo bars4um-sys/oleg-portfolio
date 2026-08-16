@@ -13,8 +13,8 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
         <a href="#top" className="flex flex-col leading-tight">
-          <span className="text-sm font-semibold tracking-[0.2em] text-foreground">ОЛЕГ ЧУМАЧЕНКО</span>
-          <span className="text-xs tracking-wide text-muted-foreground">Веб-дизайнер &amp; Продуктовый верстальщик</span>
+          <span className="text-sm font-semibold tracking-[0.2em] text-foreground">OCH STUDIO</span>
+          <span className="text-xs tracking-wide text-muted-foreground">Олег Чумаченко — Веб-дизайн и упаковка экспертных продуктов</span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Основная навигация">

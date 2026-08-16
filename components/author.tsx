@@ -24,7 +24,7 @@ export function Author() {
           <div className="animate-float overflow-hidden rounded-[2rem] border border-primary/25 bg-card shadow-2xl">
             <img
               src={asset("/oleg-portrait.webp")}
-              alt="Портрет Олега Чумаченко — веб-дизайнера и продуктового верстальщика"
+              alt="Портрет Олега Чумаченко — веб-дизайнера"
               className="h-auto w-full object-cover"
             />
           </div>
@@ -41,9 +41,8 @@ export function Author() {
           </Reveal>
           <Reveal delay={160}>
             <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-              Веб-дизайнер и продуктовый верстальщик. Помогаю экспертам и онлайн-школам превращать
-              методические материалы в лендинги, которые выглядят как премьера, а не как реферат — и
-              приносят заявки.
+              Веб-дизайнер. Помогаю экспертам и онлайн-школам превращать методические
+              материалы в понятные, красивые сайты, которые дочитывают до конца и приносят заявки.
             </p>
           </Reveal>
           <Reveal delay={240}>

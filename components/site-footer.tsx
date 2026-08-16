@@ -17,13 +17,13 @@ export function SiteFooter() {
       <div className="relative mx-auto max-w-4xl px-6 py-28 text-center">
         <Reveal>
           <h2 className="mx-auto max-w-3xl text-balance font-serif text-4xl font-medium leading-tight text-foreground md:text-6xl">
-            Готовы переупаковать ваш продукт в кинематографичный лендинг?
+            Хотите оценить потенциал вашего сайта или презентации?
           </h2>
         </Reveal>
         <Reveal delay={120}>
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            Отправьте программу вашего курса или ссылку на текущий сайт. Я бесплатно разберу 3 «слабых
-            места» в верстке и предложу концепт обновления.
+            Отправьте ссылку на текущий проект или программу курса. Я бесплатно подготовлю экспресс-разбор
+            и покажу, как улучшить структуру и повысить вовлечение аудитории.
           </p>
         </Reveal>
 
@@ -34,7 +34,7 @@ export function SiteFooter() {
             size="lg"
             className="rounded-full bg-primary px-7 text-primary-foreground transition-transform hover:-translate-y-0.5 hover:bg-primary/90"
           >
-            <Send className="size-4" /> Написать в Telegram
+            <Send className="size-4" /> Написать Олегу в Telegram
           </Button>
           <Button
             render={<a href="https://vk.me/oleg4um" target="_blank" rel="noopener noreferrer" />}
@@ -58,7 +58,7 @@ export function SiteFooter() {
 
         <div className="mt-20 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 text-sm text-muted-foreground sm:flex-row">
           <span className="tracking-[0.2em]">ОЛЕГ ЧУМАЧЕНКО</span>
-          <span>© {new Date().getFullYear()} — Веб-дизайнер &amp; Продуктовый верстальщик</span>
+          <span>© {new Date().getFullYear()} — Веб-дизайн и упаковка экспертных продуктов</span>
         </div>
       </div>
     </footer>
