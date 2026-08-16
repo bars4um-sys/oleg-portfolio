@@ -50,7 +50,14 @@ jobs:
         run: pnpm build
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
+        with:
+          # Auto-enable Pages if the site record is missing/inactive
+          # (fixes "Get Pages site failed" when configure-pages hits 404).
+          # enablement works reliably with a classic PAT / fine-grained token
+          # (scope: Pages write); falls back to GITHUB_TOKEN otherwise.
+          token: ${{ secrets.PAGES_PAT || github.token }}
+          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
