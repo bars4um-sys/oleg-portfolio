@@ -72,4 +72,5 @@
 - DNS в Timeweb переведён с 188.225.23.140 на GitHub Pages: `@` → 4×A 185.199.108–111.153, `www` → CNAME bars4um-sys.github.io. MX/TXT(SPF)/NS оставлены как есть (почта на Timeweb).
 - `public/CNAME` = `och-studio.ru` закоммичен (попадает в `out/`).
 - `bars4um-sys.github.io/oleg-portfolio/` теперь 301 → `och-studio.ru`.
-- Статус: по `http://och-studio.ru/` все страницы/ассеты 200; HTTPS-сертификат GitHub выпускает автоматически (https_enforced ещё false, «certificate does not exist yet»). По готовности — включить `https_enforced=true` через API и проверить https.
+- Статус: **HTTPS активен.** GitHub выпустил сертификат (Let's Encrypt) для `och-studio.ru`; `html_url=https://och-studio.ru/`, `https_enforced=true` (закреплён через PUT). `http://och-studio.ru/` → 301 → https; `www` (CNAME) → 301 → apex. Все страницы/ассеты 200 по https.
+- Важный блокер, из‑за которого тупил HTTPS: в DNS оставалась **старая IPv6 (AAAA) Timeweb `2a03:6f00:6:1::bce1:178c`** — GitHub пишет «DNS check successful», но не выпускает сертификат, пока не убрать AAAA старого хостинга. Починили: AAAA удалена (авторитетные NS Timeweb пусты), IPv4 = 4× официальных A GitHub Pages (185.199.108–111.153).
