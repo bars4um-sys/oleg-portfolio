@@ -32,10 +32,14 @@ jobs:
           node-version: 22
           cache: pnpm
 
-      - name: Configure basePath from repository name
+      - name: Configure basePath
         run: |
           REPO="${GITHUB_REPOSITORY#*/}"
-          if [[ "$REPO" == *.github.io ]]; then
+          if [[ -f public/CNAME ]]; then
+            # Custom domain is configured — site is served from root (no sub-path).
+            echo "Custom domain (CNAME) detected -> serve from root"
+            echo "NEXT_PUBLIC_BASE_PATH=" >> "$GITHUB_ENV"
+          elif [[ "$REPO" == *.github.io ]]; then
             echo "User/org Pages repo -> serve from root"
             echo "NEXT_PUBLIC_BASE_PATH=" >> "$GITHUB_ENV"
           else
