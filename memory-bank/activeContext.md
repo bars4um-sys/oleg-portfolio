@@ -74,3 +74,9 @@
 - `bars4um-sys.github.io/oleg-portfolio/` теперь 301 → `och-studio.ru`.
 - Статус: **HTTPS активен.** GitHub выпустил сертификат (Let's Encrypt) для `och-studio.ru`; `html_url=https://och-studio.ru/`, `https_enforced=true` (закреплён через PUT). `http://och-studio.ru/` → 301 → https; `www` (CNAME) → 301 → apex. Все страницы/ассеты 200 по https.
 - Важный блокер, из‑за которого тупил HTTPS: в DNS оставалась **старая IPv6 (AAAA) Timeweb `2a03:6f00:6:1::bce1:178c`** — GitHub пишет «DNS check successful», но не выпускает сертификат, пока не убрать AAAA старого хостинга. Починили: AAAA удалена (авторитетные NS Timeweb пусты), IPv4 = 4× официальных A GitHub Pages (185.199.108–111.153).
+
+## Инцидент 18.08.2026: «чёрный экран на och-studio.ru»
+- **Симптом:** сайт не загружался — чёрный экран, CSS и JS не подгружались (404 на `/oleg-portfolio/_next/static/chunks/3__hlwd6vdur_.css` и других ассетах).
+- **Корень проблемы:** workflow `deploy.yml` вычислял `NEXT_PUBLIC_BASE_PATH=/oleg-portfolio` по имени репозитория (project Pages repo). Но кастомный домен `och-studio.ru` обслуживается GitHub Pages из корня (`/`), без префикса `/oleg-portfolio`. HTML получался с путями `/oleg-portfolio/_next/...` и `/oleg-portfolio/cases/...`, а файлы лежали на диске Pages по пути `/_next/...` и `/cases/...` (корень).
+- **Исправление (commit `1c3a25c`, pushed):** в `.github/workflows/deploy.yml` добавлена проверка `if [[ -f public/CNAME ]]` — если CNAME файл есть (кастомный домен), `NEXT_PUBLIC_BASE_PATH` устанавливается в пустую строку. Это заставляет Next.js генерировать пути к ассетам без префикса, как требуется для корневого сервинга на кастомном домене.
+- **Требуется:** `workflow_dispatch` для принудительного пере-деплоя на och-studio.ru (push уже отправлен, но GitHub Pages может кэшировать старый артефакт).
