@@ -34,7 +34,7 @@ export function SiteFooter() {
             size="lg"
             className="rounded-full bg-primary px-7 text-primary-foreground transition-transform hover:-translate-y-0.5 hover:bg-primary/90"
           >
-            <Send className="size-4" /> Написать Олегу в Telegram
+            <Send className="size-4" /> Написать в Telegram
           </Button>
           <Button
             render={<a href="https://vk.me/oleg4um" target="_blank" rel="noopener noreferrer" />}
