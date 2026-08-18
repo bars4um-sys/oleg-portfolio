@@ -66,3 +66,10 @@
 - Кейс «Титаник»: запятая «История о том, как...»; «Курс построен на живой идее.../синхронный перевод» → «Идея курса — изучение живого английского через просмотр фильма... и синхронный разбор диалогов».
 - app/layout.tsx: <title>, description, OG/Twitter и alt превью приведены к новой формулировке.
 - Глобально: во всех видимых текстах & → «и» (оставлен только в бренде OCH STUDIO).
+
+## Домен och-studio.ru (17.08.2026)
+- Кастомному домену подключён к репозиторию через API (`cname=och-studio.ru`, PUT /pages).
+- DNS в Timeweb переведён с 188.225.23.140 на GitHub Pages: `@` → 4×A 185.199.108–111.153, `www` → CNAME bars4um-sys.github.io. MX/TXT(SPF)/NS оставлены как есть (почта на Timeweb).
+- `public/CNAME` = `och-studio.ru` закоммичен (попадает в `out/`).
+- `bars4um-sys.github.io/oleg-portfolio/` теперь 301 → `och-studio.ru`.
+- Статус: по `http://och-studio.ru/` все страницы/ассеты 200; HTTPS-сертификат GitHub выпускает автоматически (https_enforced ещё false, «certificate does not exist yet»). По готовности — включить `https_enforced=true` через API и проверить https.
