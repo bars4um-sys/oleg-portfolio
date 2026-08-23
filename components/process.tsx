@@ -30,7 +30,7 @@ export function Process() {
       <NeuroTexture seed={53} opacity={0.35} className="mx-auto max-w-7xl" />
       <div className="relative mx-auto max-w-6xl">
       <Reveal className="flex flex-col gap-3">
-        <span className="text-xs font-medium tracking-[0.28em] text-primary">МОЙ ПОДХОД</span>
+        <span className="text-xs font-medium tracking-[0.28em] text-primary">ПРОЦЕСС РАБОТЫ</span>
         <h2 className="max-w-2xl text-balance font-serif text-4xl font-medium leading-tight text-foreground md:text-5xl">
           От сложного материала — к понятному продукту
         </h2>
