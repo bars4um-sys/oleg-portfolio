@@ -17,14 +17,28 @@ export function SiteFooter() {
       <div className="relative mx-auto max-w-4xl px-6 py-28 text-center">
         <Reveal>
           <h2 className="mx-auto max-w-3xl text-balance font-serif text-4xl font-medium leading-tight text-foreground md:text-6xl">
-            Хотите оценить потенциал вашего сайта или презентации?
+            Не знаете, что мешает вашему сайту продавать?
           </h2>
         </Reveal>
         <Reveal delay={120}>
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            Отправьте ссылку на текущий проект или программу курса. Я бесплатно подготовлю экспресс-разбор
-            и покажу, как улучшить структуру и повысить вовлечение аудитории.
+            Отправьте ссылку или материалы проекта. Я бесплатно покажу:
           </p>
+          <ul className="mx-auto mt-6 flex max-w-2xl flex-wrap justify-center gap-2">
+            {[
+              "где теряется внимание",
+              "что перегружает пользователя",
+              "какие блоки стоит пересобрать",
+              "с чего начать редизайн",
+            ].map((item) => (
+              <li
+                key={item}
+                className="rounded-full border border-border bg-background/60 px-4 py-1.5 text-sm text-muted-foreground"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
         </Reveal>
 
         <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
@@ -34,7 +48,7 @@ export function SiteFooter() {
             size="lg"
             className="rounded-full bg-primary px-7 text-primary-foreground transition-transform hover:-translate-y-0.5 hover:bg-primary/90"
           >
-            <Send className="size-4" /> Написать в Telegram
+            <Send className="size-4" /> Получить экспресс-разбор
           </Button>
           <Button
             render={<a href="https://vk.me/oleg4um" target="_blank" rel="noopener noreferrer" />}
