@@ -2,9 +2,11 @@ import type { Metadata, Viewport } from 'next'
 import {
   Cormorant_Garamond,
   Fraunces,
+  Geist,
   IBM_Plex_Mono,
   Inter,
   Newsreader,
+  Noto_Serif_SC,
 } from 'next/font/google'
 import './globals.css'
 
@@ -39,6 +41,34 @@ const plexMono = IBM_Plex_Mono({
   subsets: ['latin', 'cyrillic'],
   weight: ['400', '500', '600'],
   variable: '--font-plex-mono',
+  display: 'swap',
+})
+
+/*
+ * Case 03 «Мир кунфу» fonts. The browser only downloads the font files where
+ * the variables are actually used (.theme-kunfu scope), so the home page is
+ * unaffected.
+ */
+const kunfuDisplay = Fraunces({
+  subsets: ['latin', 'cyrillic-ext'],
+  weight: ['400', '500', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-display-kunfu',
+  display: 'swap',
+})
+
+const geist = Geist({
+  subsets: ['latin', 'cyrillic-ext'],
+  variable: '--font-body',
+  display: 'swap',
+})
+
+// Used only for the decorative 功夫 watermark glyphs in the kunfu case —
+// the other fonts have no CJK coverage and would render "tofu" boxes.
+const notoSerifSC = Noto_Serif_SC({
+  subsets: ['chinese-simplified'],
+  weight: ['400'],
+  variable: '--font-cjk',
   display: 'swap',
 })
 
@@ -97,7 +127,7 @@ export default function RootLayout({
   return (
     <html
       lang="ru"
-      className={`${cormorant.variable} ${inter.variable} ${fraunces.variable} ${newsreader.variable} ${plexMono.variable} bg-background`}
+      className={`${cormorant.variable} ${inter.variable} ${fraunces.variable} ${newsreader.variable} ${plexMono.variable} ${kunfuDisplay.variable} ${geist.variable} ${notoSerifSC.variable} bg-background`}
     >
       <body className="font-sans antialiased">{children}</body>
     </html>
