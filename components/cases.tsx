@@ -102,7 +102,7 @@ export function Cases() {
                 </span>
               </div>
 
-              <h3 className="min-h-[4.25rem] text-pretty font-serif text-2xl font-medium leading-snug text-foreground md:min-h-0 lg:min-h-[6.25rem]">
+              <h3 className="min-h-[4.25rem] text-pretty font-serif text-2xl font-medium leading-snug text-foreground">
                 {item.title}
               </h3>
 
