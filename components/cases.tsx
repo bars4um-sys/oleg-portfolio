@@ -64,7 +64,7 @@ export function Cases() {
       <div className="relative mx-auto max-w-6xl">
       <Reveal className="flex flex-col gap-3">
         <span className="text-xs font-medium tracking-[0.28em] text-primary">ИЗБРАННЫЕ КЕЙСЫ</span>
-        <h2 className="max-w-2xl text-balance font-serif text-4xl font-medium leading-tight text-foreground md:text-5xl">
+        <h2 className="font-serif text-4xl font-medium leading-tight text-foreground md:text-5xl">
           Проекты, где текст превратился в продукт
         </h2>
       </Reveal>
