@@ -574,3 +574,12 @@
  * lock-up; -0.03em restores breathe for the serifs while keeping the dense
  * display tension. Section h2s intentionally keep their -.06em. */
 .hero-content h1 { letter-spacing: -0.03em; }
+
+/* Case 02 - «Мир кунфу»: align section numbers with the eyebrow labels
+ * (owner note 23.08.2026). Every section starts with the same pattern:
+ * number column (Fraunces 24px) + SectionLabel (text-xs = 12px/16px LH).
+ * The number fell back on line-height: normal (≈1.2-1.3em: tall Fraunces
+ * ascenders), so its half-leading + ascent pushed the digits ~3-4px lower
+ * than the label cap line — the pair looked unaligned. line-height: 1 clamps
+ * each numeral onto its own cap line; mobile block layout benefits too. */
+.section-number { line-height: 1; }
