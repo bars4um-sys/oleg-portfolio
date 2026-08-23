@@ -102,19 +102,19 @@ export function Cases() {
                 </span>
               </div>
 
-              <h3 className="text-pretty font-serif text-2xl font-medium leading-snug text-foreground">
+              <h3 className="min-h-[4.25rem] text-pretty font-serif text-2xl font-medium leading-snug text-foreground md:min-h-0 lg:min-h-[6.25rem]">
                 {item.title}
               </h3>
 
               {item.was && item.became && (
                 <dl className="mt-4 space-y-2 border-t border-border/60 pt-3">
-                  <div className="flex items-start justify-between gap-3 text-sm leading-snug">
+                  <div className="flex min-h-[2.5rem] items-baseline justify-between gap-3 text-sm leading-snug">
                     <dt className="shrink-0 text-[11px] font-medium tracking-[0.18em] text-muted-foreground">
                       Было
                     </dt>
                     <dd className="text-right text-muted-foreground">{item.was}</dd>
                   </div>
-                  <div className="flex items-start justify-between gap-3 text-sm leading-snug">
+                  <div className="flex min-h-[2.5rem] items-baseline justify-between gap-3 text-sm leading-snug">
                     <dt className="shrink-0 text-[11px] font-medium tracking-[0.18em] text-primary">
                       Стало
                     </dt>
