@@ -49,22 +49,22 @@ export function CaseStudyPage() {
   return (
     <main className="case-page">
       <header className="case-nav">
-        <a href="#top" className="case-logo"><span>MK</span> МИР КУНФУ</a>
         <Link
           href="/#cases"
-          className="case-nav-link case-nav-back"
+          className="case-nav-back"
           aria-label="Вернуться ко всем проектам"
         >
-          <span aria-hidden="true">←</span>
-          Все проекты
+          <span className="case-back-arrow" aria-hidden="true">←</span>
+          <span className="case-back-label">Все проекты</span>
         </Link>
+        <a href="#top" className="case-logo"><span>MK</span> МИР КУНФУ</a>
         <a
           href="https://pitch-mauve-omega.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
-          className="case-nav-link"
+          className="case-nav-cta"
         >
-          Смотреть результат <span>↘</span>
+          Смотреть результат <span aria-hidden="true">↘</span>
         </a>
       </header>
 

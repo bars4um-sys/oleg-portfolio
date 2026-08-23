@@ -535,12 +535,20 @@
   }
 }
 
-/* Case 02 - «Мир кунфу»: back link “Все проекты” in the case header.
- * Desktop only — on mobile the header stays compact (logo + result CTA),
- * mirroring the hidden decorative meta of the original design. */
-.case-nav-back { display: inline-flex; align-items: center; gap: 7px; }
-.case-nav-back span { color: var(--case-red); }
-@media (max-width: 800px) { .case-nav-back { display: none; } }
+/* Case 02 - «Мир кунфу»: header layout & accents (owner request 23.08.2026).
+ * Left — «← Все проекты» back link (consistent with the other case headers),
+ * true center — the MK «МИР КУНФУ» badge, right — accented «Смотреть результат»
+ * cinnabar chip that inverts to a red outline on hover. The original muted
+ * .case-nav-link (55% paper) made both actions disappear; the 1fr/auto/1fr
+ * grid keeps the badge optically centered regardless of side widths. */
+.case-nav { display: grid; grid-template-columns: 1fr auto 1fr; }
+.case-nav-back { justify-self: start; display: inline-flex; align-items: center; gap: 7px; color: var(--case-paper); }
+.case-nav-back .case-back-arrow { color: var(--case-red); }
+.case-nav-back:hover { color: var(--case-red); }
+.case-nav .case-logo { justify-self: center; }
+.case-nav-cta { justify-self: end; display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border: 1px solid var(--case-red); background: var(--case-red); color: var(--case-paper); transition: background-color .25s ease, color .25s ease; }
+.case-nav-cta:hover { background: transparent; color: var(--case-red); }
+@media (max-width: 800px) { .case-back-label { display: none; } .case-nav-cta { padding: 7px 10px; } }
 
 /* Case 02 - «Мир кунфу»: breathing room for section h2s (owner feedback 23.08.2026).
  * line-height .87 made the red italic 2nd lines that START WITH A CAPITAL
