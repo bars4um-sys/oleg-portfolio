@@ -541,3 +541,12 @@
 .case-nav-back { display: inline-flex; align-items: center; gap: 7px; }
 .case-nav-back span { color: var(--case-red); }
 @media (max-width: 800px) { .case-nav-back { display: none; } }
+
+/* Case 02 - «Мир кунфу»: breathing room for section h2s (owner feedback 23.08.2026).
+ * line-height .87 made the red italic 2nd lines that START WITH A CAPITAL
+ * (01 «Медиа-экосистема.», 03 «Пять доказательств.», 04 «Живой акцент.») climb into
+ * the white line above — their cap tops sat only ~0.12em under the previous baseline.
+ * 1.02 gives the caps ~0.27em of air and one consistent rhythm across all sections
+ * (02/05 second lines start lowercase, so they simply get the same comfortable pace).
+ * The hero h1 stays .87 — separate lock-up, unaffected. */
+.case-section h2 { line-height: 1.02; }
