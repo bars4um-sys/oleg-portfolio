@@ -47,7 +47,7 @@ export function Author() {
             </p>
           </Reveal>
           <Reveal delay={240}>
-            <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
+            <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
               Работаю на стыке смысла и эстетики: сначала выстраиваю логику продукта, затем перевожу её
               в кинематографичный визуальный язык с продуманной адаптацией под мобильные устройства.
             </p>
