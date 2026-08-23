@@ -392,44 +392,48 @@
   --font-serif: var(--font-fraunces);
 }
 
-/* --- Case 02 - «Мир кунфу»: dark ink & cinnabar (pitch deck case study) --- */
+/* --- Case 02 - «Мир кунфу»: light «gallery» skin (since 23.08.2026 rework).
+ * The case page deliberately does NOT look like the product: the pitch deck
+ * is dark ink & cinnabar; the case about it is a light archive — warm paper,
+ * ink text, Newsreader display + Plex Mono annotations, cinnabar as a thin
+ * brand accent. The deck artifacts (palette swatches, mini-decks) stay dark. */
 .theme-kunfu {
-  color-scheme: dark;
-  --background: oklch(0.16 0.014 55);
-  --foreground: oklch(0.95 0.012 75);
-  --card: oklch(0.205 0.016 55);
-  --card-foreground: oklch(0.95 0.012 75);
-  --popover: oklch(0.205 0.016 55);
-  --popover-foreground: oklch(0.95 0.012 75);
-  --primary: oklch(0.55 0.15 33);
-  --primary-foreground: oklch(0.98 0.01 75);
-  --secondary: oklch(0.27 0.014 55);
-  --secondary-foreground: oklch(0.95 0.012 75);
-  --muted: oklch(0.23 0.014 55);
-  --muted-foreground: oklch(0.7 0.03 65);
-  --accent: oklch(0.68 0.08 78);
-  --accent-foreground: oklch(0.16 0.014 55);
+  color-scheme: light;
+  --background: #f3ede0;
+  --foreground: #211a11;
+  --card: #f9f5ea;
+  --card-foreground: #211a11;
+  --popover: #f9f5ea;
+  --popover-foreground: #211a11;
+  --primary: #a54535;
+  --primary-foreground: #f6f1e5;
+  --secondary: #e8e0cd;
+  --secondary-foreground: #211a11;
+  --muted: #e8e0cd;
+  --muted-foreground: #70654f;
+  --accent: #d9cdb2;
+  --accent-foreground: #211a11;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.76 0.03 85);
-  --chart-1: oklch(0.42 0.05 165);
-  --chart-2: oklch(0.76 0.03 85);
-  --chart-3: oklch(0.5 0.015 90);
-  --chart-4: oklch(0.4 0.015 90);
-  --chart-5: oklch(0.3 0.015 90);
+  --border: rgba(33, 26, 17, 0.14);
+  --input: rgba(33, 26, 17, 0.18);
+  --ring: #a54535;
+  --chart-1: #a54535;
+  --chart-2: #211a11;
+  --chart-3: #70654f;
+  --chart-4: #a99c82;
+  --chart-5: #d9cdb2;
   --radius: 0.25rem;
-  --sidebar: oklch(0.19 0.012 205);
-  --sidebar-foreground: oklch(0.93 0.008 90);
-  --sidebar-primary: oklch(0.42 0.05 165);
-  --sidebar-primary-foreground: oklch(0.96 0.01 90);
-  --sidebar-accent: oklch(0.27 0.012 200);
-  --sidebar-accent-foreground: oklch(0.93 0.008 90);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.76 0.03 85);
+  --sidebar: #f9f5ea;
+  --sidebar-foreground: #211a11;
+  --sidebar-primary: #a54535;
+  --sidebar-primary-foreground: #f6f1e5;
+  --sidebar-accent: #e8e0cd;
+  --sidebar-accent-foreground: #211a11;
+  --sidebar-border: rgba(33, 26, 17, 0.14);
+  --sidebar-ring: #a54535;
 
-  --font-sans: var(--font-body);
-  --font-display: var(--font-display-kunfu);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-newsreader);
 }
 
 /* --- Scenario-only utilities: paper grain & perforation --- */
@@ -583,3 +587,67 @@
  * than the label cap line — the pair looked unaligned. line-height: 1 clamps
  * each numeral onto its own cap line; mobile block layout benefits too. */
 .section-number { line-height: 1; }
+
+/* ==========================================================================
+   SKIN «light gallery» — Case 02 «Мир кунфу» (variant A, owner-approved
+   23.08.2026). The case page must not mimic the deck: ink/cinnabar variables
+   of .case-page are role-inverted (surface ↔ text), every hardcoded
+   paper-alpha hairline of the migrated dark CSS is superseded with ink
+   hairlines, meta/annotations move onto Plex Mono, display faces onto
+   Newsreader (native italic for quotes/em on yasuraka). Deck artifacts
+   (swatches, mini-decks) intentionally keep their dark deck styling and
+   Fraunces copy face — they read as exhibits. This block MUST stay last.
+   ========================================================================== */
+.case-page { --case-ink: #f3ede0; --case-paper: #211a11; --case-red: #a54535; }
+.case-page ::selection { background: rgb(165 69 53 / 25%); }
+
+/* header */
+.case-nav { font-family: var(--font-plex-mono); border-bottom: 1px solid rgb(33 26 17 / 14%); }
+.case-nav-meta, .case-nav-link { color: rgb(33 26 17 / 55%); }
+.case-nav-link:hover { color: var(--case-paper); }
+.case-nav-cta { border-color: var(--case-paper); background: var(--case-paper); color: var(--case-ink); }
+.case-nav-cta:hover { background: transparent; color: var(--case-paper); }
+
+/* hero */
+.case-hero { border-bottom: 1px solid rgb(33 26 17 / 14%); background: radial-gradient(ellipse 50% 70% at 85% 42%, rgb(165 69 53 / 10%), transparent 68%), var(--case-ink); }
+.hero-index, .hero-footer { font-family: var(--font-plex-mono); color: rgb(33 26 17 / 55%); }
+.hero-eyebrow { font-family: var(--font-plex-mono); }
+.hero-lede { color: rgb(33 26 17 / 70%); }
+.hero-watermark { color: rgb(33 26 17 / 5%); }
+
+/* ink hairlines instead of paper hairlines */
+.case-rail { border-right: 1px solid rgb(33 26 17 / 12%); }
+.case-section { border-bottom: 1px solid rgb(33 26 17 / 12%); }
+.facts-list div { border-bottom: 1px solid rgb(33 26 17 / 15%); }
+.chapter-list { border-top: 1px solid rgb(33 26 17 / 18%); }
+.chapter-list article { border-bottom: 1px solid rgb(33 26 17 / 18%); }
+
+/* rail: index sheet in mono */
+.rail-title { font-family: var(--font-plex-mono); color: rgb(33 26 17 / 45%); }
+.case-rail nav a { font-family: var(--font-plex-mono); color: rgb(33 26 17 / 55%); }
+.rail-bottom { font-family: var(--font-plex-mono); color: rgb(33 26 17 / 40%); }
+
+/* body shades (ink on paper; red comes through var(--case-red) untouched) */
+.large-copy { color: rgb(33 26 17 / 72%); }
+.facts-list dt { font-family: var(--font-plex-mono); color: rgb(33 26 17 / 45%); }
+.facts-list dd { color: var(--case-paper); }
+.chapter-list p { color: rgb(33 26 17 / 62%); }
+.system-heading p { color: rgb(33 26 17 / 62%); }
+.outcome-stat span { color: rgb(33 26 17 / 60%); }
+.case-footer p { color: rgb(33 26 17 / 55%); }
+.footer-right { font-family: var(--font-plex-mono); color: rgb(33 26 17 / 50%); }
+
+/* soft cinnabar tinting for interactive bits */
+.outline-cta:hover { color: var(--case-red); }
+
+/* type: mono annotations + Newsreader italics for quotes */
+.swatch { font-family: var(--font-plex-mono); }
+.quote-block p { font-style: italic; }
+.section-number { font-family: var(--font-newsreader), Georgia, serif; }
+
+/* mini-decks keep the deck's own Fraunces face (dark artifacts) */
+.mini-deck-copy { font-family: var(--font-display-kunfu), Georgia, serif; }
+
+@media (max-width: 800px) {
+  .case-rail { background: var(--case-ink); border-bottom: 1px solid rgb(33 26 17 / 12%); }
+}
