@@ -14,6 +14,8 @@ type CaseItem = {
   cta: string
   href?: string
   locked?: boolean
+  was?: string
+  became?: string
 }
 
 const CASES: CaseItem[] = [
@@ -26,6 +28,8 @@ const CASES: CaseItem[] = [
     image: "/cases/scenario-case.webp",
     cta: "Смотреть полный кейс",
     href: "/scenario",
+    was: "47 страниц методических материалов.",
+    became: "5 смысловых блоков + готовая страница запуска.",
   },
   {
     index: "Кейс 02",
@@ -36,6 +40,8 @@ const CASES: CaseItem[] = [
     image: "/cases/kunfu-case.svg",
     cta: "Смотреть полный кейс",
     href: "/kunfu",
+    was: "Набор идей и материалов.",
+    became: "12-слайдовый pitch deck с единой логикой рассказа.",
   },
   {
     index: "Кейс 03",
@@ -46,6 +52,8 @@ const CASES: CaseItem[] = [
     image: "/cases/titanic-case.webp",
     cta: "Смотреть полный кейс",
     href: "/titanic",
+    was: "Академическая подача материала.",
+    became: "Эмоциональный интерфейс, построенный вокруг атмосферы фильма.",
   },
 ]
 
@@ -98,7 +106,24 @@ export function Cases() {
                 {item.title}
               </h3>
 
-              <p className="text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+              {item.was && item.became && (
+                <dl className="mt-4 space-y-2 border-t border-border/60 pt-3">
+                  <div className="flex items-start justify-between gap-3 text-sm leading-snug">
+                    <dt className="shrink-0 text-[11px] font-medium tracking-[0.18em] text-muted-foreground">
+                      Было
+                    </dt>
+                    <dd className="text-right text-muted-foreground">{item.was}</dd>
+                  </div>
+                  <div className="flex items-start justify-between gap-3 text-sm leading-snug">
+                    <dt className="shrink-0 text-[11px] font-medium tracking-[0.18em] text-primary">
+                      Стало
+                    </dt>
+                    <dd className="text-right font-medium text-foreground">{item.became}</dd>
+                  </div>
+                </dl>
+              )}
+
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
 
               <div className="mt-auto pt-2">
                 {item.locked ? (
