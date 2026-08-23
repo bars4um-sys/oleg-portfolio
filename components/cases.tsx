@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { asset } from '@/lib/utils'
 import { ArrowUpRight, Lock } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import { Reveal } from "@/components/reveal"
 import { NeuroTexture } from "@/components/neuro-texture"
 
@@ -23,7 +24,7 @@ const CASES: CaseItem[] = [
     description:
       "Пересборка хаотичного текста программы в структурированный 5-блочный лендинг с конверсией в заявку. Понятная иерархия, кастомный UI и полная готовность к запуску.",
     image: "/cases/scenario-case.webp",
-    cta: "Читать полный кейс",
+    cta: "Смотреть полный кейс",
     href: "/scenario",
   },
   {
@@ -33,7 +34,7 @@ const CASES: CaseItem[] = [
     description:
       "12-слайдовый питч-дек для медиа-экосистемы «Мир кунфу»: нарративная архитектура, дизайн-система и визуальный язык, который запоминается после презентации.",
     image: "/cases/kunfu-case.svg",
-    cta: "Читать полный кейс",
+    cta: "Смотреть полный кейс",
     href: "/kunfu",
   },
   {
@@ -43,7 +44,7 @@ const CASES: CaseItem[] = [
     description:
       "Редизайн сайта для авторского курса по фильму «Титаник». Замена академической подачи на кинематографичный UX/UI, передающий атмосферу блокбастера.",
     image: "/cases/titanic-case.webp",
-    cta: "Читать полный кейс",
+    cta: "Смотреть полный кейс",
     href: "/titanic",
   },
 ]
@@ -105,12 +106,13 @@ export function Cases() {
                     <Lock className="size-4" /> {item.cta}
                   </span>
                 ) : (
-                  <Link
-                    href={item.href!}
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-colors hover:text-primary/80"
+                  <Button
+                    render={<Link href={item.href!} />}
+                    nativeButton={false}
+                    className="rounded-full bg-primary px-4 text-primary-foreground shadow-md shadow-primary/20 transition-all hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/40"
                   >
                     {item.cta} <ArrowUpRight className="size-4" />
-                  </Link>
+                  </Button>
                 )}
               </div>
             </div>
