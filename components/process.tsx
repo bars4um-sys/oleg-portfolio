@@ -1,21 +1,26 @@
 import { Reveal } from "@/components/reveal"
 import { NeuroTexture } from "@/components/neuro-texture"
 
-const PRINCIPLES = [
+const STEPS = [
   {
     num: "01",
-    title: "Фокус внимания за 3 секунды",
-    text: "В эпоху соцсетей длинные простыни текста не читают. Я выделяю главное, структурирую смыслы и делаю так, чтобы клиент сразу видел ценность предложения.",
+    title: "Разбираюсь",
+    text: "Изучаю материалы, выделяю главное.",
   },
   {
     num: "02",
-    title: "Визуальное доверие",
-    text: "Чистая вёрстка, аккуратная типографика и визуальные акценты создают ощущение надёжного, дорогого продукта без навязчивой рекламы.",
+    title: "Собираю структуру",
+    text: "Определяю путь пользователя и иерархию информации.",
   },
   {
     num: "03",
-    title: "Логика вместо хаоса",
-    text: "Выстраиваю последовательность блоков так, чтобы у посетителя не оставалось лишних вопросов, а целевое действие (заявка/покупка) было простым и естественным.",
+    title: "Создаю визуальную систему",
+    text: "Типографика, интерфейс, визуальный язык.",
+  },
+  {
+    num: "04",
+    title: "Адаптирую и запускаю",
+    text: "Мобильная версия, финальная сборка, подготовка к запуску.",
   },
 ]
 
@@ -25,14 +30,14 @@ export function Process() {
       <NeuroTexture seed={53} opacity={0.35} className="mx-auto max-w-7xl" />
       <div className="relative mx-auto max-w-6xl">
       <Reveal className="flex flex-col gap-3">
-        <span className="text-xs font-medium tracking-[0.28em] text-primary">ПОЧЕМУ ЭТО РАБОТАЕТ</span>
+        <span className="text-xs font-medium tracking-[0.28em] text-primary">КАК Я РАБОТАЮ</span>
         <h2 className="max-w-2xl text-balance font-serif text-4xl font-medium leading-tight text-foreground md:text-5xl">
-          Принцип работы
+          Как я превращаю материал в продукт
         </h2>
       </Reveal>
 
-      <div className="mt-14 grid gap-10 md:grid-cols-3">
-        {PRINCIPLES.map((p, i) => (
+      <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        {STEPS.map((p, i) => (
           <Reveal key={p.num} delay={i * 130} className="group relative flex flex-col gap-4 pt-6">
             <span className="absolute left-0 top-0 h-px w-full bg-primary/25" aria-hidden="true" />
             <span className="absolute left-0 top-0 h-px w-0 bg-primary transition-all duration-700 ease-out group-hover:w-full" aria-hidden="true" />
