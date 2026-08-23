@@ -114,7 +114,7 @@ export function Cases() {
                     </dt>
                     <dd className="text-right text-muted-foreground">{item.was}</dd>
                   </div>
-                  <div className="flex min-h-[2.5rem] items-baseline justify-between gap-3 text-sm leading-snug">
+                  <div className="flex min-h-[3.75rem] items-baseline justify-between gap-3 text-sm leading-snug">
                     <dt className="shrink-0 text-[11px] font-medium tracking-[0.18em] text-primary">
                       Стало
                     </dt>
