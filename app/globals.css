@@ -558,3 +558,13 @@
  * (02/05 second lines start lowercase, so they simply get the same comfortable pace).
  * The hero h1 stays .87 — separate lock-up, unaffected. */
 .case-section h2 { line-height: 1.02; }
+
+/* Case 02 - «Мир кунфу»: air between the hero h1 and the lead paragraph
+ * (owner note 23.08.2026). The h1 tight .87 leading lifts its last line box
+ * up to the baseline of the red italic «кунфу», so the original 32px
+ * margin-top of the lead was visually swallowed by the «у/ф» descenders.
+ * 64px (desktop) / 44px (mobile) restores a comfortable ~0.5em breathe.
+ * The mobile rule repeats margin-left: 0 AFTER the source media block so
+ * cascade order keeps the 32% desktop indent off narrow screens. */
+.hero-lede { margin: 64px 0 0 32%; }
+@media (max-width: 800px) { .hero-lede { margin: 44px 0 0 0; } }
