@@ -74,7 +74,7 @@ export function CaseStudyPage() {
         <div className="hero-content">
           <p className="hero-eyebrow">Portfolio case study · Investor pitch deck</p>
           <h1>Мир<br /><em>кунфу</em></h1>
-          <p className="hero-lede">Как превратить стратегию культурного медиа-проекта в историю, которой хочется стать частью.</p>
+          <p className="hero-lede">Как превратить стратегию культурного медиа-проекта в историю, частью которой хочется стать.</p>
         </div>
         <div className="hero-footer"><span>ART DIRECTION / STRATEGY / DIGITAL EXPERIENCE</span><span>SCROLL TO EXPLORE ↓</span></div>
       </section>

@@ -568,3 +568,9 @@
  * cascade order keeps the 32% desktop indent off narrow screens. */
 .hero-lede { margin: 64px 0 0 32%; }
 @media (max-width: 800px) { .hero-lede { margin: 44px 0 0 0; } }
+
+/* Case 02 - «Мир кунфу»: loosen hero h1 tracking slightly (owner note 23.08.2026).
+ * The shared -.06em makes Fraunces serifs collide in the huge «Мир / кунфу»
+ * lock-up; -0.03em restores breathe for the serifs while keeping the dense
+ * display tension. Section h2s intentionally keep their -.06em. */
+.hero-content h1 { letter-spacing: -0.03em; }
