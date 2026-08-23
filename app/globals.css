@@ -651,3 +651,31 @@
 @media (max-width: 800px) {
   .case-rail { background: var(--case-ink); border-bottom: 1px solid rgb(33 26 17 / 12%); }
 }
+
+/* --------------------------------------------------------------------------
+   Finance screen (section 05): payback & profitability, built for investors.
+   The metric tiles and scenario ledger stay DARK — they are the deck's own
+   artifact language inside the light gallery page (Fraunces numerals,
+   ink-paper palette of the product).
+   -------------------------------------------------------------------------- */
+.finance-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 56px 0 14px; }
+.finance-metric { position: relative; overflow: hidden; min-height: 170px; padding: 18px 18px 20px; background: #211b18; border: 1px solid rgb(238 231 218 / 18%); color: #eee7da; display: flex; flex-direction: column; justify-content: flex-end; gap: 12px; }
+.finance-metric strong { color: #eee7da; font-family: var(--font-display-kunfu), Georgia, serif; font-size: clamp(1.9rem, 2.6vw, 2.6rem); font-weight: 400; line-height: 1; letter-spacing: -.02em; }
+.finance-metric i { width: 28px; height: 2px; background: #a54535; }
+.finance-metric span { color: rgb(238 231 218 / 55%); font-family: var(--font-plex-mono); font-size: 11px; letter-spacing: .06em; line-height: 1.5; }
+
+.finance-scenarios { background: #211b18; border: 1px solid rgb(238 231 218 / 18%); padding: 22px 22px 24px; }
+.scenarios-title { display: block; margin-bottom: 16px; color: rgb(238 231 218 / 55%); font-family: var(--font-plex-mono); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; }
+.scenarios-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.scenario { display: flex; flex-direction: column; gap: 10px; padding-top: 14px; border-top: 1px solid rgb(238 231 218 / 18%); }
+.scenario b { color: rgb(238 231 218 / 55%); font-family: var(--font-plex-mono); font-size: 11px; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; }
+.scenario span { color: #eee7da; font-family: var(--font-display-kunfu), Georgia, serif; font-size: clamp(1.9rem, 2.6vw, 2.6rem); font-weight: 400; line-height: 1; }
+.scenario.is-base { border-top-color: #a54535; border-top-width: 2px; }
+.scenario.is-base b { color: #a54535; }
+
+@media (max-width: 800px) {
+  .finance-metrics { grid-template-columns: 1fr; margin-top: 44px; }
+  .finance-metric { min-height: 140px; }
+  .scenarios-row { grid-template-columns: 1fr; gap: 18px; }
+  .finance-scenarios { padding: 18px 16px 20px; }
+}

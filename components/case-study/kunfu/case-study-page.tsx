@@ -8,6 +8,7 @@ const sections = [
   ['challenge', 'Задача'],
   ['strategy', 'Стратегия'],
   ['system', 'Система'],
+  ['finance', 'Финансы'],
   ['outcome', 'Результат'],
 ]
 
@@ -135,13 +136,43 @@ export function CaseStudyPage() {
             </div>
           </section>
 
-          <section id="outcome" className="case-section outcome-section">
+          <section id="finance" className="case-section finance-section">
             <div className="section-number">05</div>
+            <div className="section-main">
+              <SectionLabel>Финансовая модель</SectionLabel>
+              <h2>Инвестору нужны<br /><em>цифры.</em></h2>
+              <div className="overview-grid">
+                <p className="large-copy">Специально для инвесторов внутри презентации собрана отдельная финансовая ветка — она показывает потенциальную доходность проекта и сроки окупаемости: от допущений и юнит-экономики до P&amp;L, безубыточности и сценариев денежного потока.</p>
+                <dl className="facts-list">
+                  <div><dt>Формат</dt><dd>Отдельная ветка на 11 экранов</dd></div>
+                  <div><dt>Вход</dt><dd>Слайд 10 · по кнопке «Финансовая модель»</dd></div>
+                  <div><dt>Состав</dt><dd>Допущения → P&amp;L → сценарии → инвестору</dd></div>
+                  <div><dt>Горизонт</dt><dd>10 лет планирования</dd></div>
+                </dl>
+              </div>
+              <div className="finance-metrics">
+                <div className="finance-metric"><strong>Год 8</strong><i /><span>полная окупаемость<br />по базовому сценарию</span></div>
+                <div className="finance-metric"><strong>15–25%</strong><i /><span>чистая маржа<br />в зрелой фазе</span></div>
+                <div className="finance-metric"><strong>~15 млн ₽</strong><i /><span>накопленная прибыль<br />к 10-му году</span></div>
+              </div>
+              <div className="finance-scenarios">
+                <span className="scenarios-title">Десятилетний результат · млн ₽</span>
+                <div className="scenarios-row">
+                  <div className="scenario"><b>Пессимистичный</b><span>−6</span></div>
+                  <div className="scenario is-base"><b>Базовый</b><span>+2</span></div>
+                  <div className="scenario"><b>Амбициозный</b><span>+9</span></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="outcome" className="case-section outcome-section">
+            <div className="section-number">06</div>
             <div className="section-main">
               <SectionLabel>Результат</SectionLabel>
               <h2>История,<br /><em>готовая к разговору.</em></h2>
               <div className="outcome-stat"><strong>12</strong><span>слайдов, которые<br />собирают проект<br />в одно целое</span></div>
-              <div className="outcome-grid"><p className="large-copy">Интерактивный pitch deck стал не финальной точкой, а первым публичным артефактом проекта — его можно показать инвестору, партнёру или будущему участнику сообщества.</p><a href="#top" className="outline-cta">Вернуться к началу <span>↑</span></a></div>
+              <div className="outcome-grid"><p className="large-copy">Интерактивный pitch deck с отдельной финансовой веткой стал не финальной точкой, а первым публичным артефактом проекта — его можно показать инвестору, партнёру или будущему участнику сообщества.</p><a href="#top" className="outline-cta">Вернуться к началу <span>↑</span></a></div>
             </div>
           </section>
 
