@@ -1,16 +1,17 @@
 # Портфолио Олега Чумаченко
 
 Многостраничный сайт-портфолио на **Next.js (App Router) + Tailwind CSS v4**.
-Состоит из главной страницы и двух подробных кейс-стади:
+Состоит из главной страницы и трёх подробных кейс-стади:
 
 | Страница | Маршрут | Тема |
 | --- | --- | --- |
 | Главная (портфолио) | `/` | тёмная «эспрессо & шампань» |
 | Кейс 01 · «Адаптированный сценарий» | `/scenario` | светлая «рукопись» (paper / ink / red) |
-| Кейс 02 · «Titanic English» | `/titanic` | светлая «кино» (navy + gold) |
+| Кейс 02 · «Мир кунфу» | `/kunfu` | тёмная «чернила & киноварь» (ink / cinnabar / paper) |
+| Кейс 03 · «Titanic English» | `/titanic` | светлая «кино» (navy + gold) |
 
 Каждый кейс сохраняет свою визуальную тему благодаря scoped CSS-переменным
-(`.theme-scenario`, `.theme-titanic`), не затрагивая тёмную тему портфолио.
+(`.theme-scenario`, `.theme-kunfu`, `.theme-titanic`), не затрагивая тёмную тему портфолио.
 
 ## Локальный запуск
 
@@ -33,7 +34,8 @@ pnpm build
 - `basePath` определяется автоматически по имени репозитория
   (для `user.github.io` — корень, для проектного репозитория — `/<repo>`).
 
-URL сайта: `https://<ваш-логин>.github.io/<repo>/`
+URL сайта: `https://och-studio.ru/` (GitHub Pages c кастомным доменом;
+`bars4um-sys.github.io/oleg-portfolio/` → 301 на основной домен).
 
 ## Структура
 
@@ -44,13 +46,17 @@ app/
   scenario/             # кейс 01
     layout.tsx          # metadata кейса
     page.tsx            # композиция секций кейса (theme-scenario)
-  titanic/              # кейс 02
+  kunfu/                # кейс 02
+    layout.tsx
+    page.tsx            # (theme-kunfu)
+  titanic/              # кейс 03
     layout.tsx
     page.tsx            # (theme-titanic)
 components/
-  cases.tsx             # карточки кейсов со ссылками на /scenario и /titanic
+  cases.tsx             # карточки кейсов со ссылками на /scenario, /kunfu и /titanic
   case-study/
     scenario/           # компоненты кейса 01
-    titanic/            # компоненты кейса 02
-app/globals.css         # токены тем + scoped .theme-scenario / .theme-titanic
+    kunfu/              # компоненты кейса 02
+    titanic/            # компоненты кейса 03
+app/globals.css         # токены тем + scoped .theme-scenario / .theme-kunfu / .theme-titanic
 ```

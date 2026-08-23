@@ -45,7 +45,7 @@ const plexMono = IBM_Plex_Mono({
 })
 
 /*
- * Case 03 «Мир кунфу» fonts. The browser only downloads the font files where
+ * Case 02 «Мир кунфу» fonts. The browser only downloads the font files where
  * the variables are actually used (.theme-kunfu scope), so the home page is
  * unaffected.
  */

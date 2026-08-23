@@ -351,7 +351,7 @@
   --font-mono: var(--font-plex-mono);
 }
 
-/* --- Case 02 - Titanic English: light cinema (navy + gold accent) --- */
+/* --- Case 03 - Titanic English: light cinema (navy + gold accent) --- */
 .theme-titanic {
   color-scheme: light;
   --background: oklch(0.975 0.004 247);
@@ -392,7 +392,7 @@
   --font-serif: var(--font-fraunces);
 }
 
-/* --- Case 03 - «Мир кунфу»: dark ink & cinnabar (pitch deck case study) --- */
+/* --- Case 02 - «Мир кунфу»: dark ink & cinnabar (pitch deck case study) --- */
 .theme-kunfu {
   color-scheme: dark;
   --background: oklch(0.16 0.014 55);
@@ -469,7 +469,7 @@
 }
 
 /*
- * Case 03 - «Мир кунфу»: bespoke case-study CSS (migrated verbatim from
+ * Case 02 - «Мир кунфу»: bespoke case-study CSS (migrated verbatim from
  * pitch-presentation_case/app/globals.css). All selectors are scoped by the
  * .case-/.hero-/.mini-deck/.swatch/.rail-/.footer- prefixes, so they cannot
  * collide with the main site or the other case-study themes.
@@ -535,7 +535,7 @@
   }
 }
 
-/* Case 03 - «Мир кунфу»: back link “Все проекты” in the case header.
+/* Case 02 - «Мир кунфу»: back link “Все проекты” in the case header.
  * Desktop only — on mobile the header stays compact (logo + result CTA),
  * mirroring the hidden decorative meta of the original design. */
 .case-nav-back { display: inline-flex; align-items: center; gap: 7px; }
