@@ -1,27 +1,30 @@
 import { Aurora } from "@/components/aurora"
 import { Reveal } from "@/components/reveal"
+import { ArrowUpRight } from "lucide-react"
 
-const SERVICES = [
+const PRIMARY = [
   {
     num: "01",
-    title: "Веб-разработка и редизайн",
-    text: "Продающие сайты и посадочные страницы для анонса и запуска продуктов. Чёткая структура, адаптированная под мобильные устройства.",
+    title: "Пересобрать сложный продукт",
+    text: "Для курса, программы или образовательного проекта: собрать десятки страниц и разные смыслы в систему, в которой легко разобраться.",
   },
   {
     num: "02",
-    title: "Презентации и Pitch Decks",
-    text: "Презентации для вебинаров, отчётов и выступлений. Единый фирменный стиль, наглядные схемы и понятная инфографика.",
+    title: "Упаковать запуск",
+    text: "Лендинг, презентация и визуальные материалы как единый ансамбль — чтобы запуск выглядел цельно и продавал с первого касания.",
   },
   {
     num: "03",
-    title: "Сопутствующая графика и соцсети",
-    text: "Оформление обложек, гайдов, чек-листов, рекламных креативов и баннеров для анонса запуска.",
+    title: "Обновить существующий сайт",
+    text: "Аудит → новая структура → дизайн → адаптив. Без «переделки ради переделки»: усиливаем то, что уже работает, и чиним слабые места.",
   },
-  {
-    num: "04",
-    title: "Оформление контента курсов",
-    text: "Структурирование учебных материалов, гайдлайнов и оформления личных кабинетов (GetCourse и др.).",
-  },
+]
+
+const EXTRAS = [
+  "Баннеры и обложки",
+  "Оформление соцсетей",
+  "Гайды и чек-листы",
+  "Инфографика и схемы",
 ]
 
 export function Services() {
@@ -41,8 +44,8 @@ export function Services() {
           </h2>
         </Reveal>
 
-        <div className="mt-14 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2">
-          {SERVICES.map((s, i) => (
+        <div className="mt-14 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+          {PRIMARY.map((s, i) => (
             <Reveal
               key={s.num}
               delay={i * 100}
@@ -61,6 +64,28 @@ export function Services() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal className="mt-8 flex flex-wrap items-center justify-between gap-6 border-t border-border pt-6">
+          <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
+            Дополнительные материалы
+          </span>
+          <ul className="flex flex-wrap gap-2">
+            {EXTRAS.map((label) => (
+              <li
+                key={label}
+                className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground"
+              >
+                {label}
+              </li>
+            ))}
+          </ul>
+          <a
+            href="/#contact"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-colors hover:text-primary/80"
+          >
+            Обсудить задачу <ArrowUpRight className="size-4" />
+          </a>
+        </Reveal>
       </div>
     </section>
   )
