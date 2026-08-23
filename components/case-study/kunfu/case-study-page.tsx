@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 const sections = [
@@ -49,7 +50,14 @@ export function CaseStudyPage() {
     <main className="case-page">
       <header className="case-nav">
         <a href="#top" className="case-logo"><span>MK</span> МИР КУНФУ</a>
-        <span className="case-nav-meta">CASE STUDY / 2026</span>
+        <Link
+          href="/#cases"
+          className="case-nav-link case-nav-back"
+          aria-label="Вернуться ко всем проектам"
+        >
+          <span aria-hidden="true">←</span>
+          Все проекты
+        </Link>
         <a
           href="https://pitch-mauve-omega.vercel.app/"
           target="_blank"
