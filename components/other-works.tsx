@@ -75,12 +75,12 @@ export function OtherWorks() {
                 {item.title}
               </h3>
 
-              <p className="text-sm font-medium text-foreground/80">{item.role}</p>
+              <p className="text-base font-medium text-foreground/80">{item.role}</p>
 
-              <dl className="mt-1 space-y-2 border-t border-border/60 pt-3">
-                <div className="flex items-start justify-between gap-3 text-sm leading-snug">
-                  <dt className="shrink-0 text-[11px] font-medium tracking-[0.18em] text-primary">Задача</dt>
-                  <dd className="text-right text-muted-foreground">{item.task}</dd>
+              <dl className="mt-2 space-y-2 border-t border-border/60 pt-3">
+                <div className="flex items-baseline justify-between gap-x-4">
+                  <dt className="shrink-0 text-xs font-semibold uppercase tracking-[0.16em] text-primary">Задача</dt>
+                  <dd className="min-w-0 text-right text-base leading-relaxed text-muted-foreground">{item.task}</dd>
                 </div>
               </dl>
 
