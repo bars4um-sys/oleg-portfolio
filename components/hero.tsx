@@ -42,8 +42,8 @@ export function Hero() {
 
         <Reveal delay={120}>
           <h1 className="mt-8 max-w-4xl text-balance font-serif text-5xl font-medium leading-[1.05] tracking-tight text-foreground md:text-7xl">
-            Превращаю сложные материалы и программы в сайты, которые{" "}
-            <span className="shimmer-text">дочитывают до конца</span> и покупают.
+            Превращаю сложные материалы и программы в понятные сайты, где легко{" "}
+            <span className="shimmer-text">увидеть главное и принять решение</span>.
           </h1>
         </Reveal>
 
