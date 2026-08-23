@@ -679,3 +679,21 @@
   .scenarios-row { grid-template-columns: 1fr; gap: 18px; }
   .finance-scenarios { padding: 18px 16px 20px; }
 }
+
+/* --------------------------------------------------------------------------
+   Commercial CTAs on the first & last screens («Заказать презентацию» /
+   «Обсудить идею» → /#contact), echoing the «Обсудить проект» pattern of
+   cases 01 & 03. Solid = ink chip (inverts on hover), ghost = outline chip.
+   -------------------------------------------------------------------------- */
+.hero-cta, .cta-band-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.hero-cta { margin-top: 44px; }
+.case-cta-solid, .case-cta-ghost { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; border: 1px solid; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; transition: background-color .25s ease, color .25s ease, border-color .25s ease; }
+.case-cta-solid span, .case-cta-ghost span { color: var(--case-red); }
+.case-cta-solid { background: var(--case-paper); border-color: var(--case-paper); color: var(--case-ink); }
+.case-cta-solid:hover { background: transparent; color: var(--case-paper); }
+.case-cta-ghost { background: transparent; border-color: rgb(33 26 17 / 30%); color: var(--case-paper); }
+.case-cta-ghost:hover { border-color: var(--case-paper); }
+
+.cta-band { margin-top: 64px; padding-top: 44px; border-top: 1px solid rgb(33 26 17 / 12%); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; }
+.cta-band p { margin: 0; font-family: var(--font-newsreader), Georgia, serif; font-size: clamp(1.7rem, 2.8vw, 2.4rem); line-height: 1.15; }
+.cta-band p em { color: var(--case-red); font-style: italic; }

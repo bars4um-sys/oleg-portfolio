@@ -76,6 +76,10 @@ export function CaseStudyPage() {
           <p className="hero-eyebrow">Portfolio case study · Investor pitch deck</p>
           <h1>Мир<br /><em>кунфу</em></h1>
           <p className="hero-lede">Как превратить стратегию культурного медиа-проекта в историю, частью которой хочется стать.</p>
+          <div className="hero-cta">
+            <a href="/#contact" className="case-cta-solid">Заказать презентацию <span aria-hidden="true">↗</span></a>
+            <a href="/#contact" className="case-cta-ghost">Обсудить идею <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
         <div className="hero-footer"><span>ART DIRECTION / STRATEGY / DIGITAL EXPERIENCE</span><span>SCROLL TO EXPLORE ↓</span></div>
       </section>
@@ -173,6 +177,13 @@ export function CaseStudyPage() {
               <h2>История,<br /><em>готовая к разговору.</em></h2>
               <div className="outcome-stat"><strong>12</strong><span>слайдов, которые<br />собирают проект<br />в одно целое</span></div>
               <div className="outcome-grid"><p className="large-copy">Интерактивный pitch deck с отдельной финансовой веткой стал не финальной точкой, а первым публичным артефактом проекта — его можно показать инвестору, партнёру или будущему участнику сообщества.</p><a href="#top" className="outline-cta">Вернуться к началу <span>↑</span></a></div>
+              <div className="cta-band">
+                <p>Нужна своя <em>история для инвесторов?</em></p>
+                <div className="cta-band-actions">
+                  <a href="/#contact" className="case-cta-solid">Заказать презентацию <span aria-hidden="true">↗</span></a>
+                  <a href="/#contact" className="case-cta-ghost">Обсудить идею <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
             </div>
           </section>
 

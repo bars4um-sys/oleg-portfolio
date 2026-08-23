@@ -9,12 +9,13 @@
   <rect width="1200" height="750" fill="#f3ede0"/>
   <rect width="1200" height="750" fill="url(#warm)"/>
   <rect x="24" y="24" width="1152" height="702" fill="none" stroke="#211a11" stroke-opacity="0.14"/>
-  <text x="1140" y="620" font-family="'Noto Serif SC','Songti SC','SimSun',serif" font-size="430" fill="#211a11" fill-opacity="0.04" text-anchor="middle">功</text>
+  <text x="1140" y="640" font-family="'Noto Serif SC','Songti SC','SimSun',serif" font-size="430" fill="#211a11" fill-opacity="0.04" text-anchor="middle">功</text>
   <text x="80" y="120" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="14" letter-spacing="5" fill="#a54535">PORTFOLIO CASE STUDY · INVESTOR PITCH DECK</text>
-  <text x="78" y="400" font-family="Georgia,'Times New Roman',serif" font-size="132" letter-spacing="-2" fill="#211a11">Мир <tspan font-style="italic" fill="#a54535">кунфу</tspan></text>
-  <text x="80" y="500" font-family="'Noto Serif SC','Songti SC','SimSun',serif" font-size="64" fill="#211a11" fill-opacity="0.35">功夫</text>
-  <rect x="82" y="536" width="52" height="3" fill="#a54535"/>
-  <text x="80" y="620" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="16" letter-spacing="3" fill="#211a11" fill-opacity="0.5">БУМАГА · ТУШЬ · КИНОВАРЬ · КОПИЯ ДЕКА</text>
+  <text x="78" y="392" font-family="Georgia,'Times New Roman',serif" font-size="132" letter-spacing="-2" fill="#211a11">Мир <tspan font-style="italic" fill="#a54535">кунфу</tspan></text>
+  <text x="80" y="462" font-family="Georgia,'Times New Roman',serif" font-size="30" font-style="italic" fill="#211a11" fill-opacity="0.72">От идеи проекта — к инвестиционному предложению</text>
+  <rect x="82" y="500" width="52" height="3" fill="#a54535"/>
+  <text x="80" y="572" font-family="'Noto Serif SC','Songti SC','SimSun',serif" font-size="52" fill="#211a11" fill-opacity="0.35">功夫</text>
+  <text x="80" y="648" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="15" letter-spacing="3" fill="#211a11" fill-opacity="0.5">БУМАГА · ТУШЬ · КИНОВАРЬ · ФИНАНСОВАЯ МОДЕЛЬ</text>
   <g>
     <rect x="800" y="150" width="300" height="210" fill="#171412" stroke="#a54535" stroke-opacity="0.55"/>
     <text x="822" y="188" font-family="'IBM Plex Mono',Menlo,monospace" font-size="10" letter-spacing="3" fill="#eee7da" fill-opacity="0.6">МИР КУНФУ — 2026</text>
