@@ -13,7 +13,7 @@ export function SiteHeader() {
           <span className="hidden sm:inline">Все проекты</span>
         </Link>
         <span className="font-serif text-sm italic tracking-wide text-muted-foreground">
-          Кейс редизайна
+          Инициативный концепт
         </span>
         <Link
           href="/#contact"

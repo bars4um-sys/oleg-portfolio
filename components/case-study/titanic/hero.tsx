@@ -6,7 +6,7 @@ const META = [
   { label: 'Проект', value: 'Инициативная концепция для English is my Cup of Tea' },
   { label: 'Продукт', value: 'Онлайн-интенсив «Titanic English»' },
   { label: 'Цель концепции', value: 'Показать возможное направление редизайна' },
-  { label: 'Выполнено', value: 'Анализ открытой страницы → структура → UI-концепция → адаптивная вёрстка' },
+  { label: 'Выполнено', value: 'Анализ открытой страницы → структура → UI-концепция → адаптивный прототип' },
 ]
 
 function FilmRail({ className }: { className?: string }) {
@@ -58,7 +58,7 @@ export function Hero() {
 
             <div className="mt-9 inline-flex items-baseline gap-4 border-l-2 border-accent pl-5">
               <span className="max-w-[18rem] text-sm leading-snug text-muted-foreground">
-                Цель концепции — усилить эмоциональную подачу курса и сделать путь к заявке понятнее.
+                Цель концепции — усилить эмоциональную подачу курса, выстроить более ясную визуальную иерархию и сделать основные условия участия заметными уже на первом экране.
               </span>
             </div>
           </div>
