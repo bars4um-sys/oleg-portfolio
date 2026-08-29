@@ -37,9 +37,12 @@ export function AfterSection() {
               src="/images/titanic-english-after.webp"
               alt="Новая версия лендинга Titanic English — тёмно-синий кинематографичный дизайн с золотыми акцентами"
               tone="dark"
-              chromeLabel="englishteacup.org/titanic — новая версия"
+              chromeLabel="Авторская концепция редизайна"
               height={640}
             />
+            <p className="mt-3 text-xs leading-relaxed text-navy-foreground/50">
+              Не опубликована на сайте школы
+            </p>
           </Reveal>
 
           <Reveal delay={160}>

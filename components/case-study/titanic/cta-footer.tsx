@@ -20,8 +20,12 @@ export function CtaFooter() {
         </Reveal>
 
         <div className="mt-8 flex flex-col gap-4 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>Кейс подготовлен как часть портфолио · Titanic English, 2026</p>
-          <p>Скриншоты лендинга принадлежат School «English is my Cup of Tea»</p>
+          <div>
+            <p className="font-semibold text-foreground">О статусе проекта</p>
+            <p className="mt-1.5 max-w-3xl leading-relaxed">
+              Это инициативная концепция, подготовленная как предложение автору образовательного проекта. Работа не является опубликованной версией сайта и не подтверждает коммерческое сотрудничество. Представленные решения не тестировались на реальном трафике; показатели конверсии и продаж не заявляются. Название проекта, исходные материалы и изображения используются исключительно для демонстрации направления предложенного редизайна.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

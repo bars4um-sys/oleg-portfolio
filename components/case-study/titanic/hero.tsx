@@ -3,10 +3,10 @@ import { asset } from '@/lib/utils'
 import Image from 'next/image'
 
 const META = [
-  { label: 'Клиент', value: 'English is my Cup of Tea' },
+  { label: 'Проект', value: 'Инициативная концепция для English is my Cup of Tea' },
   { label: 'Продукт', value: 'Онлайн-интенсив «Titanic English»' },
-  { label: 'Задача', value: 'Редизайн продающего лендинга' },
-  { label: 'Формат работы', value: 'Аналитика → бриф → UI/UX' },
+  { label: 'Цель концепции', value: 'Показать возможное направление редизайна' },
+  { label: 'Выполнено', value: 'Анализ открытой страницы → структура → UI-концепция → адаптивная вёрстка' },
 ]
 
 function FilmRail({ className }: { className?: string }) {
@@ -34,35 +34,31 @@ export function Hero() {
         <div className="grid gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-10">
           <div>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground">
-              <span className="rounded-sm bg-navy px-2.5 py-1 text-navy-foreground">До / После</span>
-              <span>Edtech · Лендинг · Конверсия</span>
+              <span className="rounded-sm bg-navy px-2.5 py-1 text-navy-foreground">Концепт</span>
+              <span>Edtech · Лендинг · Инициатива</span>
             </div>
 
             <h1 className="mt-8 max-w-xl font-serif text-5xl leading-[1.05] tracking-tight text-balance sm:text-6xl">
-              Из простого текста — в
-              <span className="relative mt-1 block w-fit font-bold uppercase text-accent">
-                афишу !
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-x-0 -bottom-1 h-1.5 w-full bg-accent/40"
-                />
-              </span>
+              ИНИЦИАТИВНАЯ КОНЦЕПЦИЯ РЕДИЗАЙНА
             </h1>
 
             <p className="mt-3 max-w-xl font-serif text-2xl leading-tight text-muted-foreground text-balance sm:text-3xl">
-              Редизайн сайта для курса по фильму «Титаник»
+              Из текстовой страницы — в атмосферу кинопремьеры
             </p>
 
             <p className="mt-6 max-w-xl pt-3 text-lg leading-relaxed text-muted-foreground text-pretty">
-              История о том, как лендинг онлайн-интенсива по английскому языку
-              превратился из простенького текста с устаревшим дизайном в яркую
-              киноафишу фильма, на который хочется купить билет.
+              Концепт лендинга онлайн-интенсива по английскому языку, созданный как предложение автору курса.
             </p>
 
+            <div className="mt-6 rounded-sm border border-accent/40 bg-accent/10 px-5 py-4">
+              <p className="text-sm leading-relaxed text-foreground">
+                Это инициативный проект, а не результат коммерческого заказа. Концепция была предложена автору курса, но не публиковалась на сайте школы и не проходила проверку на реальном трафике.
+              </p>
+            </div>
+
             <div className="mt-9 inline-flex items-baseline gap-4 border-l-2 border-accent pl-5">
-              <span className="font-serif text-4xl tracking-tight text-foreground sm:text-5xl">×2.8</span>
-              <span className="max-w-[14rem] text-sm leading-snug text-muted-foreground">
-                рост конверсии в заявку после запуска нового дизайна
+              <span className="max-w-[18rem] text-sm leading-snug text-muted-foreground">
+                Цель концепции — усилить эмоциональную подачу курса и сделать путь к заявке понятнее.
               </span>
             </div>
           </div>

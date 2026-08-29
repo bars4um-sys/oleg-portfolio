@@ -31,7 +31,7 @@ export function ComparisonSection() {
               <BrowserFrame
                 src="/images/titanic-english-before.webp"
                 alt="Первый экран старой версии лендинга"
-                chromeLabel="Старая версия"
+                chromeLabel="Исходная версия"
                 height={420}
               />
             </div>
@@ -45,7 +45,7 @@ export function ComparisonSection() {
                 src="/images/titanic-english-after.webp"
                 alt="Первый экран новой версии лендинга"
                 tone="dark"
-                chromeLabel="Новая версия"
+                chromeLabel="Авторская концепция"
                 height={420}
               />
             </div>

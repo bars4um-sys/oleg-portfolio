@@ -60,15 +60,15 @@ export function BriefSection() {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-12 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-16">
           <Reveal className="lg:sticky lg:top-24 lg:self-start">
-            <SectionLabel index="02">Бриф</SectionLabel>
+            <SectionLabel index="02">Проектное решение</SectionLabel>
             <h2 className="mt-6 font-serif text-4xl leading-[1.1] tracking-tight text-balance sm:text-5xl">
-              Техническое задание, блок за блоком
+              Как я пересобрал структуру страницы
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground text-pretty">
-              Разбор ошибок превратился в конкретное ТЗ: тёмно-синий фон
+              Разбор структуры страницы показал, как можно усилить каждый блок: тёмно-синий фон
               вместо коричневого, гротеск + акцентная антиква, и пересборка
-              каждого блока лендинга под задачу «зацепить → объяснить →
-              продать».
+              всех элементов лендинга под задачу «зацепить → объяснить →
+              вовлечь».
             </p>
           </Reveal>
 

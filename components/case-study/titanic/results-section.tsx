@@ -1,11 +1,14 @@
+import { Check } from 'lucide-react'
 import { Reveal } from '@/components/case-study/titanic/reveal'
 import { SectionLabel } from '@/components/case-study/titanic/section-label'
 
-const METRICS = [
-  { value: '×2.8', label: 'Конверсия в заявку', hint: 'от посетителя первого экрана до нажатия CTA' },
-  { value: '−46%', label: 'Отказы на первом экране', hint: 'герой стал понятен без чтения абзацев' },
-  { value: '+64%', label: 'Среднее время на странице', hint: 'посетители досматривают лендинг до тарифов' },
-  { value: '+92%', label: 'Выручка запуска', hint: 'при том же объёме трафика и рекламного бюджета' },
+const RESULTS = [
+  'Разработана новая визуальная система',
+  'Переработана иерархия первого экрана',
+  'Программа представлена в более наглядном формате',
+  'Тарифы собраны в сопоставимые карточки',
+  'Подготовлена адаптивная вёрстка',
+  'Создан прототип для обсуждения с автором проекта',
 ]
 
 export function ResultsSection() {
@@ -13,24 +16,25 @@ export function ResultsSection() {
     <section className="border-b border-border px-6 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl">
         <Reveal>
-          <SectionLabel index="05">Результат</SectionLabel>
+          <SectionLabel index="05">Результат концепции</SectionLabel>
           <h2 className="mt-6 max-w-2xl font-serif text-4xl leading-[1.1] tracking-tight text-balance sm:text-5xl">
-            Дизайн, который читают до конца и покупают
+            Готовое направление для возможного редизайна
           </h2>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground text-pretty">
-            По итогам запуска обновлённой версии на том же трафике и той же
-            цене курса.
+            В рамках инициативной работы я разработал структуру, визуальную систему и адаптивную вёрстку страницы. Концепция показывает, как можно связать образовательный продукт с атмосферой фильма, упростить восприятие программы и сделать ключевые действия заметнее.
+          </p>
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground text-pretty">
+            Проект не запускался на реальном трафике, поэтому показатели конверсии и продаж не приводятся.
           </p>
         </Reveal>
 
-        <div className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-md border border-border bg-border sm:grid-cols-4">
-          {METRICS.map((metric, i) => (
-            <Reveal key={metric.label} delay={i * 70} className="bg-card p-6 sm:p-8">
-              <p className="font-serif text-4xl tracking-tight text-accent sm:text-5xl">
-                {metric.value}
-              </p>
-              <p className="mt-3 text-sm font-semibold leading-snug">{metric.label}</p>
-              <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{metric.hint}</p>
+        <div className="mt-14 grid gap-5 sm:grid-cols-2">
+          {RESULTS.map((item, i) => (
+            <Reveal key={item} delay={i * 70}>
+              <div className="flex items-start gap-3 rounded-sm border border-border bg-card p-5">
+                <Check className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden="true" />
+                <span className="text-sm leading-relaxed">{item}</span>
+              </div>
             </Reveal>
           ))}
         </div>
