@@ -47,7 +47,7 @@ export function Hero() {
           </h1>
         </Reveal>
 
-        <Reveal delay={240}>
+        <Reveal delay={160}>
           <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
             Разрабатываю посадочные страницы, презентации и материалы курсов для экспертов и бизнеса. Помогаю
             превратить объёмную информацию в ясную систему — через структуру, визуальную иерархию и понятную
@@ -55,7 +55,7 @@ export function Hero() {
           </p>
         </Reveal>
 
-        <Reveal delay={360}>
+        <Reveal delay={200}>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Button
               render={<a href="#cases" />}

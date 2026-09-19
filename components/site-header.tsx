@@ -14,7 +14,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
         <a href="#top" className="flex flex-col leading-tight">
           <span className="text-sm font-semibold tracking-[0.2em] text-foreground">OCH STUDIO</span>
-          <span className="text-xs tracking-wide text-muted-foreground">Олег Чумаченко — Веб-дизайн и упаковка экспертных продуктов</span>
+          <span className="text-xs tracking-wide text-[#D2C8BA]">Олег Чумаченко — Веб-дизайн и упаковка экспертных продуктов</span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Основная навигация">
@@ -22,7 +22,7 @@ export function SiteHeader() {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm text-muted-foreground transition-colors hover:text-primary"
+              className="text-sm text-[#D2C8BA] transition-colors hover:text-primary"
             >
               {item.label}
             </a>

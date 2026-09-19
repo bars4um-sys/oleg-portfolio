@@ -44,7 +44,7 @@ export function Services() {
           </h2>
         </Reveal>
 
-        <div className="mt-14 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-px overflow-hidden rounded-xl border border-border bg-foreground/5 sm:grid-cols-2 lg:grid-cols-3">
           {PRIMARY.map((s, i) => (
             <Reveal
               key={s.num}

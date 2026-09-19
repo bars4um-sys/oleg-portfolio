@@ -9,13 +9,13 @@ export function SiteFooter() {
         seed={61}
         neuroOpacity={0.55}
         blobs={[
-          { className: "left-1/2 top-[-8rem] -translate-x-1/2", color: "rgba(255,181,72,0.20)", size: "36rem", duration: "24s" },
-          { className: "right-[8%] bottom-[-6rem]", color: "rgba(255,208,120,0.14)", size: "26rem", delay: "-9s", duration: "28s" },
+          { className: "left-1/2 top-[-8rem] -translate-x-1/2", color: "rgba(255,181,72,0.11)", size: "36rem", duration: "24s", blur: "44px" },
+          { className: "right-[8%] bottom-[-6rem]", color: "rgba(255,208,120,0.08)", size: "22rem", delay: "-9s", duration: "28s", blur: "40px" },
         ]}
       />
       <div className="relative mx-auto max-w-4xl px-6 py-28 text-center">
         <Reveal>
-          <div className="rounded-3xl bg-primary px-6 py-14 text-center shadow-2xl shadow-primary/25 md:px-14">
+          <div className="rounded-3xl bg-primary px-6 py-14 text-center shadow-xl shadow-primary/10 md:px-14">
             <h2 className="mx-auto max-w-3xl text-balance font-serif text-4xl font-medium leading-tight text-primary-foreground md:text-6xl">
               Не знаете, что мешает вашему сайту продавать?
             </h2>

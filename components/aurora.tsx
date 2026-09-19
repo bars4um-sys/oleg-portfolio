@@ -6,6 +6,8 @@ type Blob = {
   size: string
   delay?: string
   duration?: string
+  /** overrides the default `.aurora` blur (70px) for a tighter bloom */
+  blur?: string
 }
 
 const DEFAULT_BLOBS: Blob[] = [
@@ -56,6 +58,7 @@ export function Aurora({
             background: b.color,
             animationDelay: b.delay,
             animationDuration: b.duration,
+            ...(b.blur ? { filter: `blur(${b.blur})` } : {}),
           }}
         />
       ))}
