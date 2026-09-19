@@ -5,11 +5,13 @@ import { useEffect, useRef, useState, type ReactNode } from "react"
 type RevealProps = {
   children: ReactNode
   delay?: number
+  /** appearance duration in ms — overrides the global `.reveal` 0.8s */
+  duration?: number
   className?: string
   as?: "div" | "section" | "article" | "li" | "a"
 }
 
-export function Reveal({ children, delay = 0, className = "", as = "div", ...rest }: RevealProps & Record<string, unknown>) {
+export function Reveal({ children, delay = 0, duration, className = "", as = "div", ...rest }: RevealProps & Record<string, unknown>) {
   const ref = useRef<HTMLElement | null>(null)
   const [visible, setVisible] = useState(false)
 
@@ -37,7 +39,10 @@ export function Reveal({ children, delay = 0, className = "", as = "div", ...res
     <Tag
       ref={ref}
       className={`reveal ${visible ? "is-visible" : ""} ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{
+        transitionDelay: `${delay}ms`,
+        ...(duration ? { transitionDuration: `${duration}ms` } : {}),
+      }}
       {...rest}
     >
       {children}

@@ -34,20 +34,20 @@ export function Hero() {
         aria-hidden="true"
       />
       <div className="relative mx-auto max-w-6xl px-6 pb-24 pt-20 md:pt-28">
-        <Reveal>
+        <Reveal duration={500}>
           <p className="max-w-2xl text-xs font-medium tracking-[0.28em] text-primary">
             УПАКОВКА ЭКСПЕРТНЫХ ПРОДУКТОВ И РЕДИЗАЙН САЙТОВ
           </p>
         </Reveal>
 
-        <Reveal delay={120}>
+        <Reveal delay={100} duration={500}>
           <h1 className="mt-8 max-w-4xl text-balance font-serif text-5xl font-medium leading-[1.05] tracking-tight text-foreground md:text-7xl">
             Превращаю сложные материалы и программы в понятные сайты, где легко{" "}
             <span className="shimmer-text">увидеть главное и принять решение</span>.
           </h1>
         </Reveal>
 
-        <Reveal delay={160}>
+        <Reveal delay={250} duration={500}>
           <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
             Разрабатываю посадочные страницы, презентации и материалы курсов для экспертов и бизнеса. Помогаю
             превратить объёмную информацию в ясную систему — через структуру, визуальную иерархию и понятную
@@ -55,7 +55,7 @@ export function Hero() {
           </p>
         </Reveal>
 
-        <Reveal delay={200}>
+        <Reveal delay={400} duration={500}>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Button
               render={<a href="#cases" />}
