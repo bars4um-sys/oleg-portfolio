@@ -9,8 +9,8 @@ export function Author() {
       <Aurora
         seed={29}
         blobs={[
-          { className: "left-[-4rem] bottom-[-6rem]", color: "rgba(230,199,154,0.18)", size: "30rem", duration: "22s" },
-          { className: "right-[10%] top-[-4rem]", color: "rgba(201,160,106,0.14)", size: "24rem", delay: "-8s", duration: "26s" },
+          { className: "left-[-4rem] bottom-[-6rem]", color: "rgba(255,181,72,0.18)", size: "30rem", duration: "22s" },
+          { className: "right-[10%] top-[-4rem]", color: "rgba(255,208,120,0.14)", size: "24rem", delay: "-8s", duration: "26s" },
         ]}
       />
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 md:grid-cols-2 md:gap-16">
@@ -18,7 +18,7 @@ export function Author() {
           {/* glow ring behind the portrait */}
           <div
             className="absolute inset-0 -z-10 rounded-[2rem] blur-2xl"
-            style={{ background: "radial-gradient(circle at 50% 40%, rgba(230,199,154,0.35), transparent 70%)" }}
+            style={{ background: "radial-gradient(circle at 50% 40%, rgba(255,181,72,0.32), transparent 70%)" }}
             aria-hidden="true"
           />
           <div className="animate-float overflow-hidden rounded-[2rem] border border-primary/25 bg-card shadow-2xl">

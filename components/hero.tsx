@@ -14,7 +14,7 @@ export function Hero() {
         src={asset("/monk-backdrop.webp")}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute right-0 top-0 hidden h-full w-1/2 select-none object-cover object-center opacity-[0.14] mix-blend-luminosity md:block lg:w-[45%]"
+        className="pointer-events-none absolute right-0 top-0 hidden h-full w-1/2 select-none object-cover object-center opacity-[0.22] mix-blend-luminosity md:block lg:w-[45%]"
         style={{
           WebkitMaskImage:
             "linear-gradient(to left, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 92%), linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 22%, rgba(0,0,0,1) 78%, rgba(0,0,0,0) 100%)",
@@ -29,7 +29,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 opacity-80"
         style={{
           background:
-            "radial-gradient(120% 80% at 50% -10%, rgba(230,199,154,0.12) 0%, rgba(26,23,18,0) 60%)",
+            "radial-gradient(120% 80% at 50% -10%, rgba(255,181,72,0.14) 0%, rgba(18,17,15,0) 60%)",
         }}
         aria-hidden="true"
       />
@@ -61,7 +61,7 @@ export function Hero() {
               render={<a href="#cases" />}
               nativeButton={false}
               size="lg"
-              className="rounded-full bg-primary px-7 text-primary-foreground transition-transform hover:-translate-y-0.5 hover:bg-primary/90"
+              className="rounded-full bg-primary px-7 text-primary-foreground transition-transform hover:-translate-y-0.5 hover:bg-accent-hover"
             >
               Смотреть кейсы <ArrowDown className="size-4" />
             </Button>

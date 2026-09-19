@@ -29,11 +29,11 @@ const EXTRAS = [
 
 export function Services() {
   return (
-    <section id="services" className="relative overflow-hidden border-y border-border bg-card/40">
+    <section id="services" className="theme-services relative overflow-hidden border-y border-border bg-background">
       <Aurora
         seed={43}
         blobs={[
-          { className: "right-[-6rem] top-[-4rem]", color: "rgba(230,199,154,0.14)", size: "28rem", duration: "23s" },
+          { className: "right-[-6rem] top-[-4rem]", color: "rgba(217,106,43,0.12)", size: "28rem", duration: "23s" },
         ]}
       />
       <div className="relative mx-auto max-w-6xl px-6 py-24">
@@ -53,7 +53,7 @@ export function Services() {
             >
               <div
                 className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                style={{ background: "radial-gradient(120% 120% at 100% 0%, rgba(230,199,154,0.10), transparent 55%)" }}
+                style={{ background: "radial-gradient(120% 120% at 100% 0%, rgba(217,106,43,0.08), transparent 55%)" }}
                 aria-hidden="true"
               />
               <span className="relative font-serif text-3xl text-primary transition-transform duration-300 group-hover:-translate-y-0.5">

@@ -32,7 +32,7 @@ export function SiteHeader() {
         <Button
           render={<a href="#contact" />}
           nativeButton={false}
-          className="rounded-full bg-primary px-5 text-primary-foreground hover:bg-primary/90"
+          className="rounded-full bg-primary px-5 text-primary-foreground hover:bg-accent-hover"
         >
           Обсудить проект
         </Button>

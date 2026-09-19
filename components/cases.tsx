@@ -75,7 +75,7 @@ export function Cases() {
             as="article"
             key={item.index}
             delay={i * 120}
-            className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/5"
+            className="group flex flex-col overflow-hidden rounded-xl border border-card-border bg-card transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:shadow-2xl hover:shadow-primary/5"
           >
             <div className="relative aspect-[16/10] overflow-hidden">
               <img
@@ -134,7 +134,7 @@ export function Cases() {
                   <Button
                     render={<Link href={item.href!} />}
                     nativeButton={false}
-                    className="rounded-full bg-primary px-4 text-primary-foreground shadow-md shadow-primary/20 transition-all hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/40"
+                    className="rounded-full bg-primary px-4 text-primary-foreground shadow-md shadow-primary/20 transition-all hover:-translate-y-0.5 hover:bg-accent-hover hover:shadow-lg hover:shadow-primary/40"
                   >
                     {item.cta} <ArrowUpRight className="size-4" />
                   </Button>

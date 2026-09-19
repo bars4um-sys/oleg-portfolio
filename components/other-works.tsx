@@ -53,7 +53,7 @@ export function OtherWorks() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Открыть сайт: ${item.title} (в новой вкладке)`}
-            className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/5"
+            className="group flex flex-col overflow-hidden rounded-xl border border-card-border bg-card transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:shadow-2xl hover:shadow-primary/5"
           >
             <div className="relative aspect-[16/10] overflow-hidden">
               <img

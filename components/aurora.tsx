@@ -11,14 +11,14 @@ type Blob = {
 const DEFAULT_BLOBS: Blob[] = [
   {
     className: "-left-24 top-0",
-    color: "rgba(230, 199, 154, 0.22)",
+    color: "rgba(255, 181, 72, 0.22)",
     size: "34rem",
     delay: "0s",
     duration: "20s",
   },
   {
     className: "right-[-6rem] top-40",
-    color: "rgba(201, 160, 106, 0.16)",
+    color: "rgba(255, 208, 120, 0.14)",
     size: "28rem",
     delay: "-6s",
     duration: "24s",
