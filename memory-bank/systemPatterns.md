@@ -14,6 +14,10 @@
 ## Именование компонентов
 - `components/case-study/scenario/*` и `components/case-study/titanic/*` — изолированные наборы; общие `@/components/ui/button`, `@/lib/utils`.
 
+## Reveal: каскадная анимация появления
+- `components/reveal.tsx` (client) — IntersectionObserver добавляет класс `.is-visible`; `.reveal` в CSS имеет `opacity 0 → 1` + `translateY(28px → 0)`, глобальная длительность `0.8s`.
+- Опциональные пропсы: `delay` (задержка появления), `duration` (перекрывает глобальную `0.8s` через inline `transitionDuration` — используется только на стартовом hero, чтобы ускорить показ, не трогая остальные секции), `as` (тег), `className`.
+
 ## Светлая секция на тёмной главной (`.theme-services`, 19.09.2026)
 - Чтобы вынести одну секцию главной в светлую тему, не трогая `:root`, используется локальный scope-класс по образцу кейсов: `components/services.tsx` имеет `className="theme-services …"`, а токены объявлены в `app/globals.css` как `.theme-services { … }` (color-scheme: light + своя палитра `#f2e8d8`/`#181512`/`#62594f`/`#d96a2b`).
 - Механизм тот же, что у `.theme-scenario`/`.theme-titanic`/`.theme-kunfu`: CSS-переменные токенов переопределяются локально внутри обёртки; компоненты главной (со ссылками на `bg-card`/`text-primary`/`text-muted-foreground`/`border-border`) подхватывают их автоматически.
