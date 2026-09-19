@@ -14,6 +14,10 @@
 ## Именование компонентов
 - `components/case-study/scenario/*` и `components/case-study/titanic/*` — изолированные наборы; общие `@/components/ui/button`, `@/lib/utils`.
 
+## Светлая секция на тёмной главной (`.theme-services`, 19.09.2026)
+- Чтобы вынести одну секцию главной в светлую тему, не трогая `:root`, используется локальный scope-класс по образцу кейсов: `components/services.tsx` имеет `className="theme-services …"`, а токены объявлены в `app/globals.css` как `.theme-services { … }` (color-scheme: light + своя палитра `#f2e8d8`/`#181512`/`#62594f`/`#d96a2b`).
+- Механизм тот же, что у `.theme-scenario`/`.theme-titanic`/`.theme-kunfu`: CSS-переменные токенов переопределяются локально внутри обёртки; компоненты главной (со ссылками на `bg-card`/`text-primary`/`text-muted-foreground`/`border-border`) подхватывают их автоматически.
+
 ## Статический экспорт
 - `output: 'export'` → `out/`. `images.unoptimized: true` (нужно для export). `trailingSlash: true` (каталоги index.html).
 - basePath = `process.env.NEXT_PUBLIC_BASE_PATH` (авто из имени репо в CI).
