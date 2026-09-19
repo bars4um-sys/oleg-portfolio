@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/reveal"
-import { NeuroTexture } from "@/components/neuro-texture"
+import { Aurora } from "@/components/aurora"
 
 const STEPS = [
   {
@@ -27,7 +27,8 @@ const STEPS = [
 export function Process() {
   return (
     <section id="process" className="relative overflow-hidden px-6 py-24">
-      <NeuroTexture seed={53} opacity={0.35} className="mx-auto max-w-7xl" />
+      <div className="ambient-light ambient-light-process" aria-hidden="true" />
+      <Aurora seed={53} intensity="process" neuroOpacity={0.35} neuroRegion="top-0 bottom-0 left-0 right-0" />
       <div className="relative mx-auto max-w-6xl">
       <Reveal className="flex flex-col gap-3">
         <span className="text-xs font-medium tracking-[0.28em] text-primary">ПРОЦЕСС РАБОТЫ</span>

@@ -10,6 +10,8 @@ type Blob = {
   blur?: string
 }
 
+type NeuroIntensity = "hero" | "cases" | "minimal" | "light" | "process" | "cta"
+
 const DEFAULT_BLOBS: Blob[] = [
   {
     className: "-left-24 top-0",
@@ -30,8 +32,10 @@ const DEFAULT_BLOBS: Blob[] = [
 export function Aurora({
   blobs = DEFAULT_BLOBS,
   seed = 7,
-  neuroOpacity = 0.45,
+  neuroOpacity,
   neuroRegion = "inset-0",
+  intensity = "cases",
+  staticBlobs = false,
 }: {
   blobs?: Blob[]
   seed?: number
@@ -42,16 +46,18 @@ export function Aurora({
    * "top-0 bottom-0 left-0 right-1/3" to keep the mesh off the right side.
    */
   neuroRegion?: string
+  intensity?: NeuroIntensity
+  staticBlobs?: boolean
 }) {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
       <div className={`absolute ${neuroRegion}`}>
-        <NeuroTexture seed={seed} opacity={neuroOpacity} />
+        <NeuroTexture seed={seed} opacity={neuroOpacity} intensity={intensity} />
       </div>
       {blobs.map((b, i) => (
         <span
           key={i}
-          className={`aurora ${b.className}`}
+          className={`aurora ${staticBlobs ? "aurora-static" : ""} ${b.className}`}
           style={{
             width: b.size,
             height: b.size,

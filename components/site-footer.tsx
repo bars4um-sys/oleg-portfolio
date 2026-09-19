@@ -7,6 +7,8 @@ export function SiteFooter() {
     <footer id="contact" className="grain relative overflow-hidden border-t border-border">
       <Aurora
         seed={61}
+        intensity="cta"
+        staticBlobs
         neuroOpacity={0.55}
         blobs={[
           { className: "left-1/2 top-[-8rem] -translate-x-1/2", color: "rgba(255,181,72,0.11)", size: "36rem", duration: "24s", blur: "44px" },
@@ -15,7 +17,7 @@ export function SiteFooter() {
       />
       <div className="relative mx-auto max-w-4xl px-6 py-28 text-center">
         <Reveal>
-          <div className="rounded-3xl bg-primary px-6 py-14 text-center shadow-xl shadow-primary/10 md:px-14">
+          <div className="cta-breathe rounded-3xl bg-primary px-6 py-14 text-center shadow-xl shadow-primary/10 md:px-14">
             <h2 className="mx-auto max-w-3xl text-balance font-serif text-4xl font-medium leading-tight text-primary-foreground md:text-6xl">
               Не знаете, что мешает вашему сайту продавать?
             </h2>

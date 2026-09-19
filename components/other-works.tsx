@@ -1,7 +1,7 @@
 import { asset } from '@/lib/utils'
 import { ArrowUpRight } from "lucide-react"
 import { Reveal } from "@/components/reveal"
-import { NeuroTexture } from "@/components/neuro-texture"
+import { Aurora } from "@/components/aurora"
 
 type WorkItem = {
   tag: string
@@ -34,7 +34,7 @@ const WORKS: WorkItem[] = [
 export function OtherWorks() {
   return (
     <section id="works" className="relative overflow-hidden px-6 py-24">
-      <NeuroTexture seed={23} opacity={0.3} className="mx-auto max-w-7xl" />
+      <Aurora seed={23} intensity="minimal" neuroOpacity={0.3} neuroRegion="top-0 bottom-0 left-0 right-0" />
       <div className="relative mx-auto max-w-6xl">
       <Reveal className="flex flex-col gap-3">
         <span className="text-xs font-medium tracking-[0.28em] text-primary">ЕЩЁ ДВА ПРИМЕРА</span>
@@ -53,13 +53,19 @@ export function OtherWorks() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Открыть сайт: ${item.title} (в новой вкладке)`}
-            className="group flex flex-col overflow-hidden rounded-xl border border-card-border bg-card transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:shadow-2xl hover:shadow-primary/5"
+            className="case-card-hover group relative flex flex-col overflow-hidden rounded-xl border border-card-border bg-card"
           >
+            {/* delicate local glow on hover */}
+            <div
+              className="case-card-glow pointer-events-none absolute inset-0 -z-10"
+              style={{ background: "radial-gradient(120% 120% at 50% 0%, rgba(255,181,72,0.06), transparent 55%)" }}
+              aria-hidden="true"
+            />
             <div className="relative aspect-[16/10] overflow-hidden">
               <img
                 src={asset(item.image)}
                 alt={`Превью сайта: ${item.title}`}
-                className="size-full object-cover object-top transition-transform duration-[1200ms] ease-out group-hover:object-bottom"
+                className="case-card-image size-full object-cover object-top transition-transform duration-[1200ms] ease-out group-hover:object-bottom"
               />
             </div>
 
@@ -86,7 +92,7 @@ export function OtherWorks() {
 
               <div className="mt-auto pt-2">
                 <span className="inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-colors group-hover:text-primary/80">
-                  Открыть сайт <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  Открыть сайт <ArrowUpRight className="case-card-arrow size-4" />
                 </span>
               </div>
             </div>

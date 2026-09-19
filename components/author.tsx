@@ -6,8 +6,11 @@ import { Clapperboard, Package, PenTool } from "lucide-react"
 export function Author() {
   return (
     <section id="author" className="relative overflow-hidden border-y border-border">
+      {/* very restrained ambient glow behind the portrait */}
+      <div className="ambient-light ambient-light-author" aria-hidden="true" />
       <Aurora
         seed={29}
+        intensity="minimal"
         blobs={[
           { className: "left-[-4rem] bottom-[-6rem]", color: "rgba(255,181,72,0.18)", size: "30rem", duration: "22s" },
           { className: "right-[10%] top-[-4rem]", color: "rgba(255,208,120,0.14)", size: "24rem", delay: "-8s", duration: "26s" },

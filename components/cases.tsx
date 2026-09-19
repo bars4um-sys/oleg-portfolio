@@ -4,6 +4,7 @@ import { ArrowUpRight, Lock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Reveal } from "@/components/reveal"
 import { NeuroTexture } from "@/components/neuro-texture"
+import { Aurora } from "@/components/aurora"
 
 type CaseItem = {
   index: string
@@ -60,7 +61,10 @@ const CASES: CaseItem[] = [
 export function Cases() {
   return (
     <section id="cases" className="relative overflow-hidden px-6 py-24">
-      <NeuroTexture seed={17} opacity={0.35} className="mx-auto max-w-7xl" />
+      {/* slow amber light spots at the edges of the section */}
+      <div className="ambient-light ambient-light-cases" aria-hidden="true" />
+      <div className="ambient-light ambient-light-cases-secondary" aria-hidden="true" />
+      <Aurora seed={17} intensity="cases" neuroOpacity={0.35} neuroRegion="top-0 bottom-0 left-0 right-0" />
       <div className="relative mx-auto max-w-6xl">
       <Reveal className="flex flex-col gap-3">
         <span className="text-xs font-medium tracking-[0.28em] text-primary">ИЗБРАННЫЕ КЕЙСЫ</span>
@@ -75,13 +79,19 @@ export function Cases() {
             as="article"
             key={item.index}
             delay={i * 120}
-            className="group flex flex-col overflow-hidden rounded-xl border border-card-border bg-card transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:shadow-2xl hover:shadow-primary/5"
+            className="case-card-hover group relative flex flex-col overflow-hidden rounded-xl border border-card-border bg-card"
           >
+            {/* delicate local glow on hover */}
+            <div
+              className="case-card-glow pointer-events-none absolute inset-0 -z-10"
+              style={{ background: "radial-gradient(120% 120% at 50% 0%, rgba(255,181,72,0.06), transparent 55%)" }}
+              aria-hidden="true"
+            />
             <div className="relative aspect-[16/10] overflow-hidden">
               <img
                 src={asset(item.image || "/placeholder.svg")}
                 alt={`Мокап проекта: ${item.title}`}
-                className={`size-full object-cover object-top transition-transform duration-[1200ms] ease-out group-hover:object-bottom ${
+                className={`case-card-image size-full object-cover object-top transition-transform duration-[1200ms] ease-out group-hover:object-bottom ${
                   item.locked ? "blur-sm brightness-50 object-center" : ""
                 }`}
               />
@@ -136,7 +146,7 @@ export function Cases() {
                     nativeButton={false}
                     className="rounded-full bg-primary px-4 text-primary-foreground shadow-md shadow-primary/20 transition-all hover:-translate-y-0.5 hover:bg-accent-hover hover:shadow-lg hover:shadow-primary/40"
                   >
-                    {item.cta} <ArrowUpRight className="size-4" />
+                    {item.cta} <ArrowUpRight className="case-card-arrow size-4" />
                   </Button>
                 )}
               </div>

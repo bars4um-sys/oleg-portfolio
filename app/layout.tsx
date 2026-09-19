@@ -129,7 +129,10 @@ export default function RootLayout({
       lang="ru"
       className={`${cormorant.variable} ${inter.variable} ${fraunces.variable} ${newsreader.variable} ${plexMono.variable} ${kunfuDisplay.variable} ${geist.variable} ${notoSerifSC.variable} bg-background`}
     >
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <div className="film-grain-global" aria-hidden="true" />
+        {children}
+      </body>
     </html>
   )
 }

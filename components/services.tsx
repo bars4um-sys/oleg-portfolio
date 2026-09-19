@@ -32,6 +32,7 @@ export function Services() {
     <section id="services" className="theme-services relative overflow-hidden border-y border-border bg-background">
       <Aurora
         seed={43}
+        intensity="light"
         blobs={[
           { className: "right-[-6rem] top-[-4rem]", color: "rgba(217,106,43,0.12)", size: "28rem", duration: "23s" },
         ]}
