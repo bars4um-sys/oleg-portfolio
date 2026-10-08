@@ -70,7 +70,7 @@ export function SiteFooter() {
         </Reveal>
 
         <div className="mt-20 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 text-sm text-muted-foreground sm:flex-row">
-          <span className="tracking-[0.2em]">ОЛЕГ ЧУМАЧЕНКО</span>
+          <span className="tracking-[0.02em]">Чумаченко Олег</span>
           <span>© {new Date().getFullYear()} — Веб-дизайн и упаковка экспертных продуктов</span>
         </div>
       </div>
